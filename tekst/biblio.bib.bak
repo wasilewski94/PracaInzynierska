@@ -1,0 +1,7 @@
+@Book{apollo,
+title = {The Apollo Guidance Computer},
+Author = {Frank O'Brien},
+publisher = {Praxis},
+year = {2010},
+series = {Space Exploration}
+}

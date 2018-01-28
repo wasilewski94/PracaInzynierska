@@ -1,0 +1,131 @@
+\documentclass[a4paper,onecolumn,oneside,12pt,withmarginpar]{mwrep}
+\usepackage{polski}
+\usepackage{helvet}
+\usepackage[T1]{fontenc}
+\usepackage{anyfontsize}
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[polish]{babel}
+\usepackage{subfigure}
+%\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{gensymb}
+\usepackage{verbatim}
+\usepackage{indentfirst}
+\usepackage[pdftex]{hyperref}
+\usepackage{amsmath}
+\usepackage{float}
+%\usepackage{fancyheader} % nagłówek i stopka
+
+\usepackage{xargs}                      % Use more than one optional parameter in a new commands
+\usepackage[pdftex,dvipsnames]{xcolor}  % Coloured text etc.
+
+\usepackage[colorinlistoftodos,prependcaption]{todonotes}
+
+\newcommandx{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommandx{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommandx{\improve}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+
+% kursywa dla słów anglojęzycznych
+\newcommand{\ang}[1]{\textit{#1}}
+
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\hyphenpenalty=10000		% nie dziel wyrazów zbyt często
+\clubpenalty=10000			% kara za sierotki
+\widowpenalty=10000			% nie pozostawiaj wdów
+\brokenpenalty=10000		% nie dziel wyrazów między stronami
+\exhyphenpenalty=999999		% nie dziel słów z myślnikiem
+\righthyphenmin=3			% dziel minimum 3 litery
+
+
+\tolerance=4500
+\pretolerance=250
+\hfuzz=1.5pt
+\hbadness=1450
+\sloppy						% umacnia pozycję prawego marginesu
+
+\renewcommand*{\figurename}{Rys.} 
+\renewcommand*{\tablename}{Tab.} 
+
+
+% na oprawe (1.0cm - 0.7cm)*2 = 0.6cm
+% na oprawe (1.1cm - 0.7cm)*2 = 0.8cm
+%  oddsidemargin lewy margines na nieparzystych stronach
+% evensidemargin lewy margines na parzystych stronach
+
+%ILE MA MIEĆ OPRAWA??
+\def\oprawa{1.05cm}
+\addtolength{\oddsidemargin}{\oprawa}
+\addtolength{\evensidemargin}{-\oprawa}
+
+% table span multirows
+\usepackage{multirow}
+
+%\setlist{listparindent=\parindent, parsep=\parskip} % potrzebuje enumitem
+
+
+%%%%%%%%%%%%%%% Dodatkowe Pakiety %%%%%%%%%%%%%%%%%
+\usepackage{prmag2017}   % definiuje komendy opiekun,nrindeksu, rodzaj pracy, ...
+
+
+%%%%%%%%%%%%%%% Strona Tytułowa %%%%%%%%%%%%%%%%%
+% To trzeba wypelnic swoimi danymi
+\title{Raspberry Pi jako zoptymalizowany pod względem kosztu sieciowy system akwizycji danych}
+
+% autor
+\author{Krzysztof Wasilewski}
+\nrindeksu{265956}
+
+\opiekun{dr inż. Wojciech Zabołotny}
+
+\terminwykonania{28 stycznia 2018} % data na oświadczeniu o samodzielności
+\rok{2018}
+
+
+% Podziekowanie - opcjonalne
+%\podziekowania{\input{podziekowania.tex}}
+
+\miasto{Warszawa}
+\uczelnia{POLITECHNIKA WARSZAWSKA}
+\wydzial{WYDZIAŁ ELEKTRONIKI
+\linebreak[1] I TECHNIK INFORMACYJNYCH}
+\instytut{Instytut Systemów Elektronicznych}
+\zaklad{Zakład Układów i Systemów Elektronicznych}
+\kierunekstudiow{Elektronika}
+\specjalnosc{Elektronika i Inżynieria Komputerowa}
+
+%%% koniec od P.W
+
+\opinie{%
+  \input{opiniaopiekuna.tex}
+  \newpage
+  \input{recenzja.tex}
+}
+\streszczenia{
+%\begin{center}
+  \input{streszczenia.tex}
+%\end{center}
+}
+
+\begin{document}
+\maketitle
+
+\input{rozdzial-1.tex}
+\input{rozdzial-2.tex}
+\input{rozdzial-3.tex}
+\input{rozdzial-4.tex}
+\input{rozdzial-5.tex}
+\input{rozdzial-6.tex}
+\input{bibliografia.tex}
+
+%\bibliography{biblio}
+%\bibliographystyle{ieeetr}
+
+\listoftodos[Notes]
+
+\end{document}

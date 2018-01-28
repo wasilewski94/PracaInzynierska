@@ -1,0 +1,34 @@
+\chapter{Wstęp}
+\label{wstep}
+
+\section{Wprowadzenie}
+
+W dzisiejszych czasach w dobie Internetu i rozwoju Internetu Rzeczy rośnie zapotrzebowanie na wydajne i zoptymalizowane pod względem kosztu sieciowe systemy akwizycji danych. Rozwój technologii pozwolił na miniaturyzację czujników oraz zmniejszenie kosztu urządzeń zbierających dane pomiarowe.
+
+Akwizycja (zbieranie) danych jest pierwszym i bardzo ważnym etapem przetwarzania danych, gdyż jakość systemu akwizycji wpływa na wydajność i dokładność całego systemu pomiarowego. Istotnym aspektem jest by odpowiednio dobrać typ i parametry techniczne systemu akwizycji danych do konkretnego zastosowania. Należy zwrócić uwagę czy dane urządzenie będzie w stanie obsłużyć sygnały ze wszystkich urządzeń, z których sygnał doprowadzamy do wejść systemu uwzględniając rodzaj transmisji, poziomy napięć logicznych czy wydajność prądową układu zasilania. 
+Dodatkowo system sieciowy musi używać odpowiedniego do danego zastosowania protokołu transmisji.  
+
+Główny nacisk pracy dyplomowej był położony na zachowanie jak najdokładniejszej informacji o czasie pomiaru i okresie próbkowania. Dodatkowo system powinien być zoptymalizowany pod względem kosztu. Użycie platformy Raspberry Pi daje dosyć duże możliwości, jednak ma też swoje ograniczenia. Pierwszym i chyba największym sprzętowym ograniczeniem, wynikającym z zastosowania tej platformy jest brak przetwornika analogowo-cyfrowego na płytce. W celu obsługi sygnałów analogowych konieczne jest zastosowanie zewnętrznego układu. Parametry techniczne płytki Raspberry Pi oraz interfejsy wymiany danych jakie posiada pozwalają na podłączenie i pracę wielu układów peryferyjnych jednocześnie.
+
+
+\section{Cel i zakres pracy}
+Celem pracy było wykonanie zoptymalizowanego pod względem kosztu sieciowego systemu akwizycji danych z wykorzystaniem platformy Raspberry Pi. Projekt zakładał stworzenie płytki pomiarowej będącej rozszerzeniem do platformy Raspberry Pi umożliwiającej zbieranie danych z zewnętrznych urządzeń przy pomocy dostępnych interfejsów SPI i I2C. Płytka powinna zawierać układy umożliwiające doprowadzenie sygnałów z zewnętrznych czujników. 
+Sieciowy system akwizycji danych może być wykorzystany do stworzenia stacji meteorologicznej z funkcją zdalnego dostępu, możliwością sterowania i wyzwalania pomiarów oraz odbioru danych przez interfejs sieciowy.
+W zakres pracy wchodziło:
+\begin{itemize}
+\item Opracowanie sterowników jądra i aplikacji użytkownika umożliwiających obsługę przetworników i czujników pomiarowych podłączonych do komputera przez typowe interfejsy sprzętowe, takie jak I2C, SPI
+\item Zapewnienie akwizycji danych z zachowaniem jak najpełniejszej (w granicach możliwości technicznych) informacji o czasie pomiaru, w celu umożliwienia późniejszej analizy off-line danych z różnych źródeł z uwzględnieniem korelacji czasowej.
+\item Przygotowanie serwerów i/lub programów klienckich umożliwiających udostępnienie zmierzonych danych przez sieć TCP/IP.
+\item Realizacja interfejsu pozwalającego na zdalne sterowanie procesem pomiaru.
+\end{itemize}
+
+\section{Układ pracy}
+Praca została podzielona na sześć rozdziałów. Po niniejszym rozdziale wstępnym, w Rozdziale \ref{ch:zalozenia} przedstawiono założenia i wymagania postawione sieciowego dla systemu akwizycji danych oraz dla oprogramowania umożliwiającego obsłużenie urządzeń dołączanych do platformy Raspberry Pi.
+W Rozdziale \ref{ch:projekt} przedstawiono projekt układu pozwalającego na realizację zaprojektowanego systemu akwizycji danych. Rozdział \ref{ch:soft} zawiera opis różnych rozwiązań programowych.
+W Rozdziale \ref{ch:testy} przedstawiony jest przebieg oraz wyniki testów systemu. W Rozdziale \ref{ch:podsumowanie} zawarto podsumowanie projektu.
+
+
+Podstawowym celem projektu było zaprojektowanie i realizacja systemu umożliwiającego użytkownikowi akwizycję danych pomiarowych, z zachowaniem jak najdokładniejszej informacji o znaczniku czasu w momencie zebrania próbki. W wielozadaniowym systemie operacyjnym zastosowanie aplikacji z przestrzeni użytkownika nie daje pewności co do reżimu czasowego wykonania poleceń zawartych w kodzie programu. W przypadku akwizycji danych z zewnętrznych przetworników podłączonych przez magistralę interfejsu szeregowego (np. \ang{spidev} dla interfejsu SPI) informacja o znaczniku czasu zarejestrowana w aplikacji z przestrzeni użytkownika nie jest dokładna i powoduje powstanie nieregularności okresu próbkowania.
+W celu zapisania jak najdokładniejszej informacji o czasie pomiaru należy znacznik czasu pobrania próbki zarejestrować w przestrzeni jądra systemu.
+
+W pracy przedstawione są możliwości różnych rozwiązań programowych. Niski koszt zbudowania systemu oraz łatwość rozszerzenia funkcjonalności powodują, że urządzenie stanowi konkurencję dla systemów komercyjnych. Projekt zakładał, że użytkownik będzie w stanie ustawiać parametry pomiarów zdalnie za pomocą aplikacji w przeglądarce internetowej. Dodatkowymi założeniami były optymalizacja pod względem kosztu i łatwa rozszerzalność systemu. W końcowej części pracy zawarto przebieg testów sprzętu oraz testów funkcjonalnych i podsumowanie wyników. 

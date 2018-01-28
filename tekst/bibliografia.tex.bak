@@ -1,0 +1,69 @@
+\begin{thebibliography}{9}
+
+
+\bibitem{NI_6008}
+National Instruments website, 
+
+http://www.ni.com/en-us/support/model.usb-6008.html
+
+\bibitem{AnalogDiscoveryDoc}
+Analog Discovery 2 Reference Manual, 
+
+https://reference.digilentinc.com/reference/instrumentation/
+
+analog-discovery-2/reference-manual?redirect=1
+
+\bibitem{raspfoundation}
+Raspberry Pi Learning Resources, Raspberry Pi Software Guide, 
+
+Raspberry Pi Foundation, 2017, 
+
+https://www.raspberrypi.org/learning/software-guide/quickstart/
+
+\bibitem{rpispecs}
+Raspberry Pi – Wikipedia, Parametry techniczne platformy Raspberry Pi,
+
+https://pl.wikipedia.org/wiki/Raspberry\_Pi
+
+\bibitem{maxdatasheet}
+ADC MAX1202 datasheet, 
+
+https://datasheets.maximintegrated.com/en/ds/MAX1202-MAX1203.pdf
+
+\bibitem{ntp}
+Building a Raspberry-Pi NTP Server, 
+
+http://raspberrypi.tomasgreno.cz/ntp-client-and-server.html
+
+\bibitem{spidev}
+SPI driver - spidev documantation
+
+https://www.kernel.org/doc/Documentation/spi/spidev
+
+\bibitem{i2cdev}
+I2C driver - i2c-dev documantation
+
+https://www.kernel.org/doc/Documentation/i2c/dev-interface
+
+\bibitem{spiKernel}
+Serial Peripheral Interface (SPI) — The Linux Kernel documentation, 
+
+https://www.kernel.org/doc/html/v4.14/driver-api/spi.html
+
+\bibitem{buildroot}
+The Buildroot user manual, 2017, 
+
+https://buildroot.org/downloads/manual/manual.html
+
+\bibitem{paho.mqtt}
+paho-mqtt 1.1 : Python Package Index
+
+https://pypi.python.org/pypi/paho-mqtt/1.1
+
+\bibitem{watchdog}
+Watchdog install on Raspbian Jessie - Raspberry Pi Forums, 2017, 
+
+https://www.raspberrypi.org/forums/viewtopic.php?t=175432
+
+
+\end{thebibliography}

@@ -1,0 +1,9 @@
+\chapter{Podsumowanie}
+\label{ch:podsumowanie}
+
+
+Cel pracy został osiągnięty, stworzono projekt i oprogramowanie sieciowego systemu akwizycji danych. Założenie optymalizacji kosztu zostało spełnione, układ jest dużo tańszy od rozwiązań komercyjnych, które najczęściej wymagają wykupienia licencji na oprogramowanie pozwalające sterowanie pomiarami. Główną część systemu - Raspberry Pi w wersji Zero W z modułem Wifi i Bluetooth 4.1 można nabyć za około 50zł.
+
+Użytkownik komunikuje się z systemem dzięki interfejsowi graficznemu aplikacji w przeglądarce internetowej. Zaletą systemu jest jego łatwa rozszerzalność. Dokonanie niewielkich zmian w oprogramowaniu i możliwość podłączenia urządzeń do magistrali SPI i I2C oraz pozostałych pinów GPIO sprawia, że użytkownik jest w stanie rozszerzać system o nowe funkcjonalności. Ponadto fakt, iż Raspberry Pi jest popularnym minikomputerem w swojej dziedzinie, zapewnia użytkownikowi wsparcie w dokonywaniu ewentualnych zmian w konfiguracji i strukturze systemu akwizycji danych. 
+
+Projekt może być użyty do zastosowań akwizycji danych, na przykład jako stacja meteorologiczna z możliwością zdalnego dostępu dzięki komunikacji sieciowej. Rozwiązania zawarte w projekcie umożliwiają podgląd danych w trakcie wykonywania pomiaru oraz pobranie danych przez użytkownika w celu wykonania dokładniejszej analizy. Część pracy zostanie wykorzystana podczas misji balonowej Studenckiego Koła Inżynierii Kosmicznej Politechniki Warszawskiej do zbierania danych z czujników udostępnianych przez łącze radiowe w paśmie 433MHz.

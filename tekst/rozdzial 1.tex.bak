@@ -1,0 +1,11 @@
+\chapter{Wstęp}
+
+\section{Wprowadzenie}
+
+Wraz z rozwojem komputerów osobistych pojawiła się potrzeba wygodnej komunikacji pomiędzy człowiekiem, a maszynami. Spowodowało to powstanie graficznych interfejsów użytkownika opartych o paradygmat WIMP (Windows, Icons, Menus, Pointing device). Dzięki intuicyjności i prostocie obsługi, interfejsy graficzne stały się najpopularniejszym rodzajem interfejsu użytkownika i są aktualnie powszechnie wykorzystywane w elektronice użytkowej.
+\section{Cel pracy}
+
+Celem pracy było wykonanie projektu i implementacja graficznego interfejsu użytkownika radiotelefonu amatorskiego. 
+\section{Układ pracy}
+
+Praca została podzielona na X rozdziałów 

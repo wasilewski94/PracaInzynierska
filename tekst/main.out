@@ -1,0 +1,58 @@
+\BOOKMARK [1][-]{section*.1}{Streszczenie}{}% 1
+\BOOKMARK [1][-]{section*.2}{Abstract}{}% 2
+\BOOKMARK [0][-]{chapter.1}{Wstep}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Wprowadzenie}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Cel i zakres pracy}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Uk\233ad pracy}{chapter.1}% 6
+\BOOKMARK [0][-]{chapter.2}{Za\233ozenia}{}% 7
+\BOOKMARK [1][-]{section.2.1}{Przyk\233ady system\363w akwizycji danych}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{System akwizycji danych NI USB6008}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.2}{Oscyloskop cyfrowy Digilent Analog Discovery 2}{section.2.1}% 10
+\BOOKMARK [1][-]{section.2.2}{Cechy systemu}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Informacja o czasie pomiaru}{section.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Struktura systemu}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.3.1}{Platforma Raspberry Pi}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.2}{P\233ytka pomiarowa}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.3}{Za\233ozenia oprogramowania}{section.2.3}% 16
+\BOOKMARK [0][-]{chapter.3}{Projekt}{}% 17
+\BOOKMARK [1][-]{section.3.1}{P\233ytka pomiarowa}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.2}{Przetwornik analogowo-cyfrowy}{chapter.3}% 19
+\BOOKMARK [2][-]{subsection.3.2.1}{Analiza dostepnych uk\233ad\363w}{section.3.2}% 20
+\BOOKMARK [2][-]{subsection.3.2.2}{Przetwornik MAX 1202}{section.3.2}% 21
+\BOOKMARK [2][-]{subsection.3.2.3}{Przetwornik MCP 3424}{section.3.2}% 22
+\BOOKMARK [1][-]{section.3.3}{Interfejs SPI}{chapter.3}% 23
+\BOOKMARK [1][-]{section.3.4}{Interfejs I2C}{chapter.3}% 24
+\BOOKMARK [1][-]{section.3.5}{Por\363wnanie dostepnych interfejs\363w}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.6}{Pozosta\233e czujniki pod\233aczane do systemu przez magistrale I2C}{chapter.3}% 26
+\BOOKMARK [2][-]{subsection.3.6.1}{Modu\233 z czujnikiem cisnienia i temperatury LPS25H}{section.3.6}% 27
+\BOOKMARK [2][-]{subsection.3.6.2}{Modu\233 z czujnikiem wilgotnosci i temperatury z uk\233adem HTS221}{section.3.6}% 28
+\BOOKMARK [0][-]{chapter.4}{Oprogramowanie}{}% 29
+\BOOKMARK [1][-]{section.4.1}{System operacyjny}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.2}{Srodowisko Buildroot}{chapter.4}% 31
+\BOOKMARK [2][-]{subsection.4.2.1}{Interfejs srodowiska}{section.4.2}% 32
+\BOOKMARK [2][-]{subsection.4.2.2}{Toolchain}{section.4.2}% 33
+\BOOKMARK [2][-]{subsection.4.2.3}{Dodawanie modu\233\363w jadra}{section.4.2}% 34
+\BOOKMARK [1][-]{section.4.3}{Komunikacja z Raspberry Pi}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.4}{Sterowniki urzadzen}{chapter.4}% 36
+\BOOKMARK [2][-]{subsection.4.4.1}{Sterownik przetwornika analogowo-cyfrowego}{section.4.4}% 37
+\BOOKMARK [2][-]{subsection.4.4.2}{Protok\363\233 synchronizacji czasu}{section.4.4}% 38
+\BOOKMARK [2][-]{subsection.4.4.3}{Znacznik czasu}{section.4.4}% 39
+\BOOKMARK [1][-]{section.4.5}{Drzewo urzadzen}{chapter.4}% 40
+\BOOKMARK [1][-]{section.4.6}{Aplikacje w przestrzeni uzytkownika}{chapter.4}% 41
+\BOOKMARK [2][-]{subsection.4.6.1}{Aplikacja wykorzystujaca modu\233 spidev}{section.4.6}% 42
+\BOOKMARK [2][-]{subsection.4.6.2}{Programy publikujace i subskrybujace dane przy pomocy protoko\233u MQTT}{section.4.6}% 43
+\BOOKMARK [2][-]{subsection.4.6.3}{Aplikacja internetowa}{section.4.6}% 44
+\BOOKMARK [0][-]{chapter.5}{Testy}{}% 45
+\BOOKMARK [1][-]{section.5.1}{Przebieg test\363w}{chapter.5}% 46
+\BOOKMARK [1][-]{section.5.2}{Uzyte narzedzia}{chapter.5}% 47
+\BOOKMARK [1][-]{section.5.3}{Testy funkcjonalne}{chapter.5}% 48
+\BOOKMARK [2][-]{subsection.5.3.1}{Test interfejsu sieciowego}{section.5.3}% 49
+\BOOKMARK [2][-]{subsection.5.3.2}{Testy niezawodnosci systemu}{section.5.3}% 50
+\BOOKMARK [1][-]{section.5.4}{Wyniki pomiar\363w}{chapter.5}% 51
+\BOOKMARK [2][-]{subsection.5.4.1}{Charakterystyki napiecia spr\363bkowanego przetwornikiem ADC MAX1202}{section.5.4}% 52
+\BOOKMARK [2][-]{subsection.5.4.2}{Analiza FFT sygna\233u sinusoidalnego}{section.5.4}% 53
+\BOOKMARK [2][-]{subsection.5.4.3}{Pomiary cisnienia czujnikiem LPS25H}{section.5.4}% 54
+\BOOKMARK [1][-]{section.5.5}{Analiza wynik\363w}{chapter.5}% 55
+\BOOKMARK [2][-]{subsection.5.5.1}{Prezentacja i wizualizacja danych pomiarowych}{section.5.5}% 56
+\BOOKMARK [0][-]{chapter.6}{Podsumowanie}{}% 57
+\BOOKMARK [0][-]{chapter*.6}{Bibliografia}{}% 58
