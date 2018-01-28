@@ -96,6 +96,8 @@ Drugi testowany układ to 18-bitowy 4-kanałowy przetwornik MCP 3424. Przetworni
   \hline
   Maksymalna częstotliwość próbkowania & 133 kS/s & 240 SPS (12bit) \\
   \hline
+  Cena(w serwisie farnell.com [PLN]) & 49,63 & 16,42 \\
+  \hline
   Wzmacniacz programowalny & brak & x1, x2, x4 lub x8 \\
   \hline
   
@@ -107,21 +109,25 @@ Drugi testowany układ to 18-bitowy 4-kanałowy przetwornik MCP 3424. Przetworni
 \section{Interfejs SPI}
 
 Interfejs szeregowy SPI (z ang. Serial Peripheral Interface)
-jest powszechnie wykorzystywanym synchronicznym interfejsem do komunikacji pomiędzy systemem mikroprocesorowym, a układami peryferyjnymi. Interfejs pozwala na podłączenie tylko jednego układu typu Master komunikującego się z układami typu Slave w trybie full-duplex. Urządzenia podłączone do jednej magistrali muszą mieć jednakowe poziomy logiczne. Transmisja odbywa się za pomocą czterech linii:
+jest powszechnie wykorzystywanym synchronicznym interfejsem do komunikacji pomiędzy systemem mikroprocesorowym, a układami peryferyjnymi. Interfejs pozwala na podłączenie tylko jednego układu typu Master komunikującego się z układami typu Slave w trybie full-duplex. Urządzenia podłączone do jednej magistrali muszą mieć jednakowe poziomy logiczne.
+
+\newpage
+
+Transmisja odbywa się za pomocą czterech linii:
 \begin{itemize}
-\item MOSI (Master In Slave Out), 
+\item MISO (Master In Slave Out), 
 \item MOSI (Master Out Slave In),
 \item SCLK (Serial Clock),
 \item CS (Chip Select).
 \end{itemize}
 
+Przetwornik, którego użyto jest w stanie komunikować się przy częstotliwości taktowania zegara do 2MHz. Urządzenie zostało podłączone do Raspberry Pi jako układ typu Slave. Sygnał zegara jest podawany z układu typu Master, więc w celu uniknięcia błędów transmisji należy ustawić parametr maksymalnej częstotliwości zegara w sterowniku. 
 
-Przetwornik, którego użyto jest w stanie komunikować się przy częstotliwości taktowania zegara do 2MHz.
+\newpage
 
+\section{Interfejs I$^2$C}
 
-\section{Interfejs I2C}
-
-Interfejs I2C (również IIC - Inter Integrated Circuit - z ang. pomiędzy układami scalonymi) to synchroniczny interfejs szeregowy zaprojektowany przez firmę Philips. Stosowany jest do komunikacji z urządzeniami nie wymagającymi dużych szybkości transmisji. Interfejs pozwala na podłączenie do magistrali wiele urządzenia typu Master oraz typu Slave. Wszystkie nadajniki posiadają wyjścia typu otwarty kolektor co powoduje, że poziomy logiczne napięć stanu wysokiego układów podłączonych do jednej magistrali mogą się różnić.  Urządzenia komunikujące się za pomocą tego interfejsu mają z góry przypisany adres i są podłączone z resztą urządzeń za pomocą dwóch linii: 
+Interfejs I$^2$C (również IIC - Inter Integrated Circuit - z ang. pomiędzy układami scalonymi) to synchroniczny interfejs szeregowy zaprojektowany przez firmę Philips. Stosowany jest do komunikacji z urządzeniami nie wymagającymi dużych szybkości transmisji. Interfejs pozwala na podłączenie do magistrali wiele urządzenia typu Master oraz typu Slave. Wszystkie nadajniki posiadają wyjścia typu otwarty kolektor co powoduje, że poziomy logiczne napięć stanu wysokiego układów podłączonych do jednej magistrali mogą się różnić.  Urządzenia komunikujące się za pomocą tego interfejsu mają z góry przypisany adres i są podłączone z resztą urządzeń za pomocą dwóch linii: 
 \begin{itemize}
 \item SDA (Serial Data Line),
 \item SCL (Serial Clock Line).
@@ -130,14 +136,14 @@ Interfejs I2C (również IIC - Inter Integrated Circuit - z ang. pomiędzy ukła
 
 \section{Porównanie dostępnych interfejsów}
 
-Porównanie zostało wykonane pod kątem zastosowania do połączenia układów w systemie akwizycji danych. W tabeli 3.1 przedstawiono zestawienie parametrów technicznych standardów transmisji interfejsów SPI oraz I2C. 
+Porównanie zostało wykonane pod kątem zastosowania do połączenia układów w systemie akwizycji danych. W tabeli 3.1 przedstawiono zestawienie parametrów technicznych standardów transmisji interfejsów SPI oraz I$^2$C. 
 
 
 \begin{table}[!ht]
 \label{tab3.2}
 \begin{tabular}{|l|l|l|}
   \hline 
-  Nazwa interfejsu & SPI & I2C\\
+  Nazwa interfejsu & SPI & I$^2$C\\
   \hline
   Ilość linii sygnałowych & 3 + n(ilość urządzeń)  & 2 \\
   \hline  
@@ -154,13 +160,13 @@ Porównanie zostało wykonane pod kątem zastosowania do połączenia układów 
 \caption{Parametry transmisji interfejsów SPI i I2C} 
 \end{table}
 
-\section{Pozostałe czujniki podłączane do systemu przez magistralę I2C}
+\section{Pozostałe czujniki podłączane do systemu przez magistralę I$^2$C}
 
-W celu wykonania akwizycji danych pomiarowych wykorzystano dwa moduły z czujnikami ciśnienia, wilgotności powietrza oraz temperatury, podłączonych przez magistralę I2C do komputera Raspberry Pi. Moduły zawierały sensory warunków atmosferycznychw postaci układów scalonych typu MEMS (z ang. Micro Electro-Mechanical System - Mikrosystemy elektromechaniczne).
+W celu wykonania akwizycji danych pomiarowych wykorzystano dwa moduły z czujnikami ciśnienia, wilgotności powietrza oraz temperatury. Układy są  podłączane przez magistralę I$^2$C do płytki Raspberry Pi. Moduły zawierają sensory mierzące wartości warunków atmosferycznych w postaci układów scalonych typu MEMS (z ang. Micro Electro-Mechanical System - Mikrosystemy elektromechaniczne).
 
 \subsection{Moduł z czujnikiem ciśnienia i temperatury LPS25H}
 
-Moduł LPS25H od firmy Pololu zawiera barometr mierzący ciśnienie atmosferyczne w zakresie: 260 mbar - 1260 mbar (26 kPa - 126 kPa). W trybie wysokiej rozdzielczości czujnik mierzy z dokładnością 0,2 mbar (0,02kPa). do typową wartością skuteczną szumu 0,01 mbar (1Pa)
+Moduł LPS25H od firmy Pololu zawiera barometr mierzący ciśnienie atmosferyczne w zakresie: 260 mbar - 1260 mbar (26 kPa - 126 kPa). W trybie wysokiej rozdzielczości czujnik mierzy z dokładnością 0,2 mbar (0,02kPa).
 
 \begin{figure}[h]
 	\centering
@@ -171,7 +177,7 @@ Moduł LPS25H od firmy Pololu zawiera barometr mierzący ciśnienie atmosferyczn
 
 \subsection{Moduł z czujnikiem wilgotności i temperatury z układem HTS221}
 
-Moduł HTS221 zawiera o sensor wilgotności i temperatury firmy STMicroelectronics, Zakres pomiaru temperatury to 0 - 60\degree C, a wilgotności powietrza: 0 - 100\%. Układ obsługuje interfejsy I2C lub SPI. Na płytce znajduje się konwerter poziomów napięć co umożliwia współpracę układu z urządzeniami o poziomach 3,3V oraz 5V i stabilizator napięcia.
+Moduł HTS221 zawiera sensor wilgotności i temperatury firmy STMicroelectronics. Zakres pomiaru temperatury to 0 - 60\degree C, a wilgotności powietrza: 0 - 100\%. Układ obsługuje interfejsy I$^2$C lub SPI. Na płytce znajduje się konwerter poziomów napięć co umożliwia współpracę układu z urządzeniami o poziomach 3,3V oraz 5V i stabilizator napięcia.
 
 \begin{figure}[t!]
 	\centering
@@ -180,7 +186,7 @@ Moduł HTS221 zawiera o sensor wilgotności i temperatury firmy STMicroelectroni
 	\label{pic:hts221}
 \end{figure}
 
-Moduły miały podobny rozstaw pinów co umożliwiło podłączenie ich do wspólnej szyny
+Moduły miały podobny rozstaw pinów co umożliwiło podłączenie ich do wspólnej szyny.
 
 \begin{figure}[b!]
 	\centering

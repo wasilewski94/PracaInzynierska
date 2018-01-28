@@ -9,7 +9,7 @@ Przeprowadzono szereg testów funkcjonalnych w celu sprawdzenia czy system speł
 
 
 \begin{itemize}
-\item analiza FFT sygnału sinusoidalnego z zastosowaniem odpowiedniego okna czasowego
+\item analiza częstotliwościowa z wykorzystaniem algorytmu FFT (z ang. Fast Fourier Transform - szybkiej transformaty Fouriera) sygnału sinusoidalnego z zastosowaniem odpowiedniego okna czasowego
 \item sprawdzenie dokładności pomiarów przy użyciu laboratoryjnych przyrządów pomiarowych 
 \item test niezawodności działania przy dużym obciążeniu aplikacji
 \item sprawdzenie poprawności danych z uwzględnieniem korelacji czasowej
@@ -17,13 +17,13 @@ Przeprowadzono szereg testów funkcjonalnych w celu sprawdzenia czy system speł
 \end{itemize}
 
 \section{Użyte narzędzia}
-Sprawdzenie parametrów pomiaru napięcia przetwornika analogowo-cyfrowego przeprowadzono z użyciem oscyloskopu cyfrowego z funkcją generowania przebiegów sygnałów. Fakt, iż oscyloskop był cyfrowy ułatwił analizę różnic w sygnale wyjściowym z generatora i sygnałem spróbkowanym. Pomiary na oscyloskopie przeprowadzane były z użyciem sondy oscyloskopowej. Na Rys. \ref{stanowisko} przedstawiono stanowisko pomiarowe systemu akwizycji danych:
+Sprawdzenie parametrów pomiaru napięcia przetwornika analogowo-cyfrowego przeprowadzono z użyciem oscyloskopu cyfrowego z funkcją generowania przebiegów sygnałów. Fakt, iż oscyloskop był cyfrowy ułatwił analizę różnic w sygnale wyjściowym z generatora i sygnałem spróbkowanym. Pomiary na oscyloskopie przeprowadzane były z użyciem sondy oscyloskopowej. Na Rys. \ref{pic:stanowisko} przedstawiono stanowisko pomiarowe systemu akwizycji danych.
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=14cm]{stanowisko}
+		\includegraphics[width=13cm]{stanowisko}
 	\caption{Stanowisko pomiarowe do pomiaru napięcia sinusoidalnego przetwornikiem analogowo-cyfrowym} 
-	\label{pic:RPi}
+	\label{pic:stanowisko}
 \end{figure}
 
 
@@ -32,7 +32,7 @@ Sprawdzenie parametrów pomiaru napięcia przetwornika analogowo-cyfrowego przep
 
 \subsection{Test interfejsu sieciowego}
 
-Wykonano test działania interfejsów sieciowych systemu użytkownika pod kątem spójności danych wysyłanych z systemu do użytkownika podłączonego przez sieć TCP/IP. Połączenie użytkownika korzystającego z przeglądarki w komputerze osobistym z systemem akwizycji danych było zestawione przy wykorzystaniu routera Wi-fi.
+Wykonano test działania interfejsów sieciowych systemu użytkownika pod kątem spójności danych wysyłanych z systemu do użytkownika podłączonego przez sieć TCP/IP. Połączenie użytkownika korzystającego z przeglądarki w komputerze osobistym z systemem akwizycji danych było zestawione przy wykorzystaniu routera Wi-Fi.
  
 
 
@@ -42,7 +42,7 @@ Niezawodność działania systemu jest bardzo istotna w przypadku sieciowego sys
 
 W komputerze Raspberry Pi istnieje możliwość uaktywnienia układu \ang{watchdog}, zapewniającego automatyczny restart systemu w przypadku jego zawieszenia. 
 Raspbian zawiera moduł do jądra obsługujący licznik układu \ang{watchdog}. 
-Aby uaktywnić układ należy dodać parametr parametr do drzewa urządzeń za pomocą wpisania \ang{dtparam=watchdog=on} w pliku zawierającym konfigurację ładowania systemu \cite{watchdog}. Dodatkowo w pliku /etc/modprobe.d/bcm2835-wdt.conf można zdefiniować czas braku aktywności systemu po jakim układ \ang{watchdog}wywoła ponowne uruchomienie systemu, wpisując \ang{options bcm2835\_wdt heartbeat=14 nowayout=0}. Należy stworzyć jeszcze plik /etc/modprobe.d/bcm2835-wdt.conf zawierający konfigurację modułu obsługującego ukłąd \ang{watchdog}: \ang{options bcm2835\_wdt heartbeat=14 nowayout=0}.
+Aby uaktywnić układ należy dodać parametr do drzewa urządzeń za pomocą wpisania \ang{dtparam=watchdog=on} w pliku zawierającym konfigurację ładowania systemu \cite{watchdog}. Dodatkowo w pliku /etc/modprobe.d/bcm2835-wdt.conf można zdefiniować czas braku aktywności systemu po jakim układ \ang{watchdog} wywoła ponowne uruchomienie systemu, wpisując \ang{options bcm2835\_wdt heartbeat=14 nowayout=0}. Należy stworzyć jeszcze plik /etc/modprobe.d/bcm2835-wdt.conf zawierający konfigurację modułu obsługującego układ \ang{watchdog}: \ang{options bcm2835\_wdt heartbeat=14 nowayout=0}.
 
 Po ustawieniu odpowiedniej konfiguracji przeprowadzono testy niezawodności działania układu \ang{watchdog}, wywołując aplikacje powodujące zawieszenie systemu z załadowanym modułem. Oprócz konsoli \ang{ssh} podłączono komputer przez konwerter USB-UART w celu upewnienia się, że system jest uruchamiany ponownie.
 Testy zakończono sukcesem, moduł sterujący układem \ang{watchdog} działał poprawnie i wywoływał ponowne uruchomienie systemu przy każdym zawieszeniu. 
@@ -58,25 +58,25 @@ Testy zakończono sukcesem, moduł sterujący układem \ang{watchdog} działał 
 Pomiar napięcia sinusoidalnego i jego analiza częstotliwościowa, umożliwia sprawdzenie poziomu nierównomierności okresu próbkowania. 
 Z oscyloskopu z funkcją generatora sygnałów wygenerowano przebieg sinusoidalny o częstotliwości 100Hz, amplitudzie 3Vp-p i składowej stałej 2V. Okres próbkowania przetwornika ustawiono w aplikacji testowej na 200us co przekłada się na częstotliwość próbkowania 5kHz. 
 Spróbkowany sygnał został poddany analizie za pomocą algorytmu FFT przy użyciu skryptu pythona z pakietami \ang{numpy} i  \ang{matplotlib} .
-Poniżej na Rys. 5.1. przedstawiono fragment wykreślonego przebiegu czasowego. Linią przerywaną zaznaczono wartość średnią sygnału.
+Poniżej na Rys. \ref{fig:sin_max1202_100Hz_adc} przedstawiono fragment wykreślonego przebiegu czasowego sygnału sinusoidalnego. Linią przerywaną zaznaczono wartość średnią sygnału.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	%\centering
 		\includegraphics[width=14cm]{sin_max1202_100Hz_adc}
 	\caption{Przebieg napięcia spróbkowanego przetwornika ADC MAX1202} 
 	\label{fig:sin_max1202_100Hz_adc}
 \end{figure}
 
-Dla porównania sygnał z generatora zmierzono oscyloskopem przy użyciu sondy oscyloskopowej. Zrzut z ekranu oscyloskopu poniżej na Rys. 5.2.
+Dla porównania sygnał z generatora zmierzono oscyloskopem przy użyciu sondy oscyloskopowej. Zrzut z ekranu oscyloskopu poniżej na Rys. \ref{fig:sin_max1202_100Hz_osc} 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=12cm]{sin_max1202_100Hz_osc.png}
 	\caption{Przebieg napięcia sinusoidalnego z oscyloskopu} 
 	\label{fig:sin_max1202_100Hz_osc}
 \end{figure}
 
-Poniżej na Rys. 5.3. przedstawiono charakterystykę zmienności okresu próbkowania. Widać na niej jak zmienia się okres próbkowania w trakcie działania programu.
+Poniżej na Rys. \ref{fig:zmiennosc_probkowania_max1202} przedstawiono charakterystykę zmienności okresu próbkowania. Widać na niej jak zmienia się okres próbkowania w trakcie działania programu.
 
 \begin{figure}[h]
 	\centering
@@ -111,19 +111,19 @@ Zmienność okresu próbkowania opisano przy użyciu parametru odchylenia standa
 
 \subsubsection{Pomiar napięcia prostokątnego}
 
-Wykonano również pomiar napięcia prostokątnego. Sygnał spróbkowano z częstotliwością 5kHz, charakterystyka jest przedstawiona na Rys. \ref{fig:rect_max1202_100Hz_adc}, a oscylogram na Rys. 5.5. 
+Wykonano również pomiar napięcia prostokątnego. Sygnał spróbkowano z częstotliwością 5kHz, charakterystyka jest przedstawiona na Rys. \ref{fig:rect_max1202_100Hz_adc}, a oscylogram na Rys. \ref{fig:rect_max1202_100Hz_osc} 
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-		\includegraphics[width=14cm]{rect_max1202_100Hz_adc}
+		\includegraphics[width=15cm]{rect_max1202_100Hz_adc}
 	\caption{Przebieg napięcia spróbkowanego przetwornika ADC MAX1202} 
 	\label{fig:rect_max1202_100Hz_adc}
 \end{figure}
 
 
-\begin{figure}[H]
+\begin{figure}[h]
 	\centering
-		\includegraphics[width=16cm]{rect_max1202_100Hz_osc}
+		\includegraphics[width=12cm]{rect_max1202_100Hz_osc}
 	\caption{Przebieg napięcia prostokątnego na oscyloskopie} 
 	\label{fig:rect_max1202_100Hz_osc}
 \end{figure}
@@ -165,7 +165,7 @@ Zmierzono ciśnienie atmosferyczne w windzie gmachu Elektroniki i Technik Inform
 
 
 \section{Analiza wyników}
-W celu dokonania porównania pomiaru maksymalnej częstotliwości próbkowania przeprowadzono analizę częstotliwościową spróbkowanego sygnału przy użyciu algorytmu FFT (z ang. Fast Fourier Transform - szybkiej transformaty Fouriera).
+W celu dokonania porównania pomiaru maksymalnej częstotliwości próbkowania przeprowadzono analizę częstotliwościową spróbkowanego sygnału przy użyciu algorytmu FFT.
 Zmienność częstotliwości próbkowania zobrazowano przy pomocy parametru odchylenia standardowego z poszczególnych odstępów czasowych pomiędzy momentami zebrania kolejnych próbek.
 
 \begin{equation}
@@ -174,7 +174,7 @@ Zmienność częstotliwości próbkowania zobrazowano przy pomocy parametru odch
 
 x - odstępy pomiędzy momentami zebraniem próbki
 
-n - ilość zebranych próbek
+N - ilość zebranych próbek
 
 
 \subsection{Prezentacja i wizualizacja danych pomiarowych}

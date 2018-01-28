@@ -25,7 +25,7 @@ Kolejnym przykładem systemu akwizycji danych jest przystawka do komputera osobi
 \item 16-kanałowy analizator logiczny (14-bit, 100MS/s, +-5V) 
 \item 2-kanałowy oscyloskop cyfrowy (14-bitowy, 100MS/s, +-25V) 
 \item wzmacniacz audio-stereo, 
-\item interfejsy SPI, I2C, UART, USB
+\item interfejsy SPI, I$^2$C, UART, USB
 \item zasilanie 5V
 \end{itemize}
 
@@ -47,10 +47,25 @@ Raspberry Pi może działać pod systemem operacyjnym Linux, który nie jest sys
 
 \subsection{Informacja o czasie pomiaru}
 
-Raspberry Pi jest komputerem zoptymalizowanym pod względem kosztów, co sprawia, że jest pozbawiony podzespołów, które są zbyt drogie. Jednym z takich układów jest układ RTC (z ang. Real Time Clock - zegar czasu rzeczywistego) Układ ten jest zasilany z baterii niezależnie od komputera i zapewnia przechowywanie czasu rzeczywistego po odłączeniu zasilania komputera. System akwizycji danych powinien zapewniać w miarę możliwości technicznych jak najdokładniejszą informację o czasie zebrania próbki danych.
-Raspberry Pi za pomocą protokołu NTP (z ang. Network Time Protocol - Sieciowy Protokół Czasu) jest w stanie synchronizować czas w systemie do wybranego w konfiguracji protokołu serwera. Konfigurację Korzystając z odpowiednich serwerów, NTP jest w stanie dostosować czas systemu klienta, uwzględniając opóźnienia w transmisji danych.
+Raspberry Pi jest komputerem zoptymalizowanym pod względem kosztów i rozmiaru, co sprawia, że jest pozbawiony podzespołów, które są zbyt drogie lub zajmują zbyt dużo miejsca na płytce. Jednym z takich układów jest układ RTC (z ang. Real Time Clock - zegar czasu rzeczywistego) Układ ten jest zasilany z baterii niezależnie od komputera i zapewnia przechowywanie czasu rzeczywistego po odłączeniu zasilania. 
 
-Wykorzystanie własnego sterownika do pomiaru napięcia przetwornika analogowo-cyfrowego pozwala na zebranie znacznika czasu z dokładnością do pojedynczych nanosekund.   
+System akwizycji danych powinien zapewniać w miarę możliwości technicznych jak najdokładniejszą informację o czasie zebrania próbki danych.
+Raspberry Pi za pomocą protokołu NTP (z ang. Network Time Protocol - Sieciowy Protokół Czasu) jest w stanie synchronizować czas w systemie do wybranego w konfiguracji protokołu serwera. Korzystając z odpowiednich serwerów, NTP jest w stanie dostosować czas systemu klienta, uwzględniając opóźnienia w transmisji danych. Protokół posiada jednak ograniczoną dokładność spowodowaną
+
+Wykorzystanie własnego sterownika do pomiaru napięcia przetwornika analogowo-cyfrowego pozwala na zebranie znacznika czasu z rozdzielczością pojedynczych nanosekund. 
+
+\subsection{Zegar czasu rzeczywistego}
+
+W przypadku, wykorzystania Raspberry Pi do pracy z ograniczonym dostępem do sieci warto dołączyć moduł zegara czasu rzeczywistego.
+Istnieje możliwość rozszerzenia systemu o moduł RTC . Na rynku są dostępne moduły obsługiwane za pomocą interfejsów szeregowych SPI lub I2C. Jednym z najbardziej popularnych modułów zegara czasu rzeczywistego kompatybilnych z Raspberry Pi jest moduł z układem DS3231\cite{rtc}. Układ zawiera niezależne zasilanie bateryjne i działa po odłączeniu Raspberry Pi od źródła napięcia.
+Moduł RTC z zasilaniem bateryjnym przedstawiono na Rys. \ref{pic:rtc}. 
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=5cm]{rtc}
+	\caption{Moduł zegara czasu rzeczywistego z układem DS2331} 
+	\label{pic:rtc}
+\end{figure}
 
 \section{Struktura systemu}
 
@@ -59,14 +74,46 @@ System składa się z platformy Raspberry Pi używanej jako komputer główny or
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=10cm]{rpi}
+		\includegraphics[width=14cm]{rpi}
 	\caption{Raspberry Pi 3 Model B} 
 	\label{pic:RPi}
 \end{figure}
 
 \subsection{Platforma Raspberry Pi}
 
-Raspberry Pi to jednopłytkowa platforma stworzona przez Raspberry Pi Foundation. Pierwsza wersja minikomputera powstała w roku 2012 i była oparta o układ firmy Broadcom BCM2835 SoC (z ang. System on Chip - System wbudowany) oraz procesor graficzny Broadcom VideoCore IV. Głównymi zaletami platformy były niska cena w stosunku do możliwości. 
+Raspberry Pi to jednopłytkowa platforma stworzona przez Raspberry Pi Foundation. Pierwsza wersja minikomputera powstała w roku 2012 i była oparta o układ firmy Broadcom BCM2835 SoC (z ang. System on Chip - System wbudowany) oraz procesor graficzny Broadcom VideoCore IV. Głównymi zaletami platformy były niska cena w stosunku do możliwości.
+
+Rozważano zastosowanie w pracy jednej z trzech wersji płytki:
+\begin{itemize}
+\item Raspberry Pi ZeroW
+\item Raspberry Pi 2 Model B
+\item Raspberry Pi 3 Model B, 
+\end{itemize}
+
+\begin{table}[t]
+\label{tabRpi}
+\centering
+\begin{tabular}{|l|l|l|l|}
+  \hline 
+  Wersja płytki & ZeroW & 2 Model B & 3 Model B\\
+  \hline
+  Procesor CPU & 1GHz ARM1176JZF-S & 1,2 GHz ARM Cortex-A53 &  900 MHz \\
+  \hline
+  Pamięć RAM  512 MB & 1GB & 1 GB LPDDR2 &\\
+  \hline
+ Połączenia sieciowe & 10/100 Ethernet, Wi-Fi (2,4 GHz 802.11n) \\
+  \hline
+
+\end{tabular}
+\caption{Parametry techniczne platformy Raspberry Pi 3 Model B 
+\cite{rpispecs}
+} 
+\end{table}
+
+Ze względu na małe różnice w cenie i założenie zastosowania bezprzewodowego dostępu do sieci zrezygnowano z wersji Model 2 B. Rozważano zastosowanie wersji ZeroW, która jest cenowo konkurencyjna do wersji Model 3 B i pozwala na bezprzewodowy dostęp do sieci za pomocą łącza Wi-Fi. Z powodu założenia przetwarzania dużej ilości danych przez system oraz instalacji  
+Ostatecznie wybrano 
+
+ 
 Platforma Raspberry Pi w wersji 3 posiada liczne złącza m.in.: HDMI, Ethernet, 4 porty USB 2.0, wyjście 3,5mm jack, złącze kart microSD oraz 40-pinowe złącze GPIO. W tabeli poniżej przedstawiono specyfikacje wersji płytki użytej w projekcie - Raspberry Pi 3 Mdel B:
 
 \begin{table}[t]
@@ -88,7 +135,8 @@ Platforma Raspberry Pi w wersji 3 posiada liczne złącza m.in.: HDMI, Ethernet,
   \hline
  Nośnik danych  & złącze kart MicroSD \\
  \hline
- 
+ Interfejsy szeregowe & SPI, I$^2$C, UART \\ 
+  \hline
 \end{tabular}
 \caption{Parametry techniczne platformy Raspberry Pi 3 Model B 
 \cite{rpispecs}
@@ -107,7 +155,7 @@ Platforma Raspberry Pi w wersji 3 posiada liczne złącza m.in.: HDMI, Ethernet,
 \subsection{Płytka pomiarowa}
 
 Płytka pomiarowa, stanowiąca rozszerzenie do Raspberry Pi, miała umożliwiać podłączenie czujników do minikomputera oraz doprowadzenie do nich zasilania i została wykonana na potrzeby pracy dyplomowej. 
-Zastosowanie przetwornika analogowo-cyfrowego pozwala na zbieranie danych z czujników analogowych. Czujniki cyfrowe podłączone przez magistralę SPI lub I2C powinny być wydajnie obsługiwane przez system.
+Zastosowanie przetwornika analogowo-cyfrowego pozwala na zbieranie danych z czujników analogowych. Czujniki cyfrowe podłączone przez magistralę SPI lub I$^2$C powinny być wydajnie obsługiwane przez system.
 
 \subsection{Założenia oprogramowania}
 

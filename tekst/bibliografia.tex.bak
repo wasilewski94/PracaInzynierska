@@ -35,6 +35,11 @@ Building a Raspberry-Pi NTP Server,
 
 http://raspberrypi.tomasgreno.cz/ntp-client-and-server.html
 
+\bibitem{rtc}
+RTC DS3231 datasheet,
+
+https://datasheets.maximintegrated.com/en/ds/DS3231.pdf
+
 \bibitem{spidev}
 SPI driver - spidev documantation
 

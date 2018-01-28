@@ -123,9 +123,7 @@
 \input{rozdzial-6.tex}
 \input{bibliografia.tex}
 
-%\bibliography{biblio}
-%\bibliographystyle{ieeetr}
 
-\listoftodos[Notes]
+%\listoftodos[Notes]
 
 \end{document}
