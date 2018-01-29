@@ -1,6 +1,6 @@
 \select@language {polish}
-\contentsline {section}{Streszczenie}{ii}{section*.1}
-\contentsline {section}{Abstract}{iii}{section*.2}
+\contentsline {section}{Streszczenie}{i}{section*.1}
+\contentsline {section}{Abstract}{ii}{section*.2}
 \contentsline {chapter}{\numberline {1\relax .\kern .5em }Wst\IeC {\k e}p}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1\relax .\kern .5em }Wprowadzenie}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2\relax .\kern .5em }Cel i zakres pracy}{1}{section.1.2}
@@ -12,23 +12,24 @@
 \contentsline {section}{\numberline {2.2\relax .\kern .5em }Cechy systemu}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1\relax .\kern .5em }Informacja o czasie pomiaru}{5}{subsection.2.2.1}
 \contentsline {section}{\numberline {2.3\relax .\kern .5em }Struktura systemu}{6}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1\relax .\kern .5em }Platforma Raspberry Pi}{6}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2\relax .\kern .5em }P\IeC {\l }ytka pomiarowa}{7}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.1\relax .\kern .5em }Platforma Raspberry Pi}{7}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2\relax .\kern .5em }P\IeC {\l }ytka pomiarowa}{8}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3\relax .\kern .5em }Za\IeC {\l }o\IeC {\.z}enia oprogramowania}{8}{subsection.2.3.3}
 \contentsline {subsection}{\numberline {2.3.4\relax .\kern .5em }Zapewnienie niezawodno\IeC {\'s}ci systemu}{8}{subsection.2.3.4}
 \contentsline {subsection}{\numberline {2.3.5\relax .\kern .5em }Protok\IeC {\'o}\IeC {\l } sieciowy MQTT}{9}{subsection.2.3.5}
 \contentsline {chapter}{\numberline {3\relax .\kern .5em }Projekt}{10}{chapter.3}
 \contentsline {section}{\numberline {3.1\relax .\kern .5em }P\IeC {\l }ytka pomiarowa}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2\relax .\kern .5em }Przetwornik analogowo-cyfrowy}{11}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1\relax .\kern .5em }Analiza dost\IeC {\k e}pnych uk\IeC {\l }ad\IeC {\'o}w}{11}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2\relax .\kern .5em }Przetwornik MAX 1202}{11}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3\relax .\kern .5em }Przetwornik MCP 3424}{12}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3\relax .\kern .5em }Interfejs SPI}{12}{section.3.3}
-\contentsline {section}{\numberline {3.4\relax .\kern .5em }Interfejs I$^2$C}{13}{section.3.4}
-\contentsline {section}{\numberline {3.5\relax .\kern .5em }Por\IeC {\'o}wnanie dost\IeC {\k e}pnych interfejs\IeC {\'o}w}{14}{section.3.5}
-\contentsline {section}{\numberline {3.6\relax .\kern .5em }Pozosta\IeC {\l }e czujniki pod\IeC {\l }\IeC {\k a}czane do systemu przez magistral\IeC {\k e} I$^2$C}{15}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1\relax .\kern .5em }Modu\IeC {\l } z czujnikiem ci\IeC {\'s}nienia i temperatury LPS25H}{15}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2\relax .\kern .5em }Modu\IeC {\l } z czujnikiem wilgotno\IeC {\'s}ci i temperatury z uk\IeC {\l }adem HTS221}{16}{subsection.3.6.2}
+\contentsline {section}{\numberline {3.2\relax .\kern .5em }Przetwornik analogowo-cyfrowy}{12}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1\relax .\kern .5em }Analiza dost\IeC {\k e}pnych uk\IeC {\l }ad\IeC {\'o}w}{12}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2\relax .\kern .5em }Przetwornik MAX 1202}{12}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3\relax .\kern .5em }Przetwornik MCP 3424}{13}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3\relax .\kern .5em }Interfejs SPI}{14}{section.3.3}
+\contentsline {section}{\numberline {3.4\relax .\kern .5em }Interfejs I$^2$C}{14}{section.3.4}
+\contentsline {section}{\numberline {3.5\relax .\kern .5em }Por\IeC {\'o}wnanie dost\IeC {\k e}pnych interfejs\IeC {\'o}w}{15}{section.3.5}
+\contentsline {section}{\numberline {3.6\relax .\kern .5em }Sterowanie pinami GPIO}{15}{section.3.6}
+\contentsline {section}{\numberline {3.7\relax .\kern .5em }Pozosta\IeC {\l }e czujniki pod\IeC {\l }\IeC {\k a}czane do systemu przez magistral\IeC {\k e} I$^2$C}{15}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1\relax .\kern .5em }Modu\IeC {\l } z czujnikiem ci\IeC {\'s}nienia i temperatury LPS25H}{16}{subsection.3.7.1}
+\contentsline {subsection}{\numberline {3.7.2\relax .\kern .5em }Modu\IeC {\l } z czujnikiem wilgotno\IeC {\'s}ci i temperatury z uk\IeC {\l }adem HTS221}{16}{subsection.3.7.2}
 \contentsline {chapter}{\numberline {4\relax .\kern .5em }Oprogramowanie}{18}{chapter.4}
 \contentsline {section}{\numberline {4.1\relax .\kern .5em }System operacyjny}{18}{section.4.1}
 \contentsline {section}{\numberline {4.2\relax .\kern .5em }\IeC {\'S}rodowisko Buildroot}{18}{section.4.2}
@@ -47,17 +48,17 @@
 \contentsline {subsection}{\numberline {4.8.2\relax .\kern .5em }Aplikacje wykorzystuj\IeC {\k a}ca modu\IeC {\l } \textit {i2cdev}}{23}{subsection.4.8.2}
 \contentsline {subsection}{\numberline {4.8.3\relax .\kern .5em }Programy publikuj\IeC {\k a}ce i subskrybuj\IeC {\k a}ce dane przy pomocy protoko\IeC {\l }u MQTT}{23}{subsection.4.8.3}
 \contentsline {subsection}{\numberline {4.8.4\relax .\kern .5em }Aplikacja webowa}{24}{subsection.4.8.4}
-\contentsline {chapter}{\numberline {5\relax .\kern .5em }Testy}{25}{chapter.5}
-\contentsline {section}{\numberline {5.1\relax .\kern .5em }Przebieg test\IeC {\'o}w}{25}{section.5.1}
-\contentsline {section}{\numberline {5.2\relax .\kern .5em }U\IeC {\.z}yte narz\IeC {\k e}dzia}{25}{section.5.2}
-\contentsline {section}{\numberline {5.3\relax .\kern .5em }Testy funkcjonalne}{25}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1\relax .\kern .5em }Test interfejsu sieciowego}{25}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2\relax .\kern .5em }Testy niezawodno\IeC {\'s}ci systemu}{26}{subsection.5.3.2}
-\contentsline {section}{\numberline {5.4\relax .\kern .5em }Wyniki pomiar\IeC {\'o}w}{26}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1\relax .\kern .5em }Charakterystyki napi\IeC {\k e}cia spr\IeC {\'o}bkowanego przetwornikiem ADC MAX1202}{26}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2\relax .\kern .5em }Analiza FFT sygna\IeC {\l }u sinusoidalnego}{28}{subsection.5.4.2}
-\contentsline {subsection}{\numberline {5.4.3\relax .\kern .5em }Pomiary ci\IeC {\'s}nienia czujnikiem LPS25H}{30}{subsection.5.4.3}
-\contentsline {section}{\numberline {5.5\relax .\kern .5em }Analiza wynik\IeC {\'o}w}{31}{section.5.5}
-\contentsline {subsection}{\numberline {5.5.1\relax .\kern .5em }Prezentacja i wizualizacja danych pomiarowych}{31}{subsection.5.5.1}
-\contentsline {chapter}{\numberline {6\relax .\kern .5em }Podsumowanie}{32}{chapter.6}
-\contentsline {chapter}{Bibliografia}{34}{chapter*.6}
+\contentsline {chapter}{\numberline {5\relax .\kern .5em }Testy}{26}{chapter.5}
+\contentsline {section}{\numberline {5.1\relax .\kern .5em }Przebieg test\IeC {\'o}w}{26}{section.5.1}
+\contentsline {section}{\numberline {5.2\relax .\kern .5em }U\IeC {\.z}yte narz\IeC {\k e}dzia}{26}{section.5.2}
+\contentsline {section}{\numberline {5.3\relax .\kern .5em }Testy funkcjonalne}{26}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1\relax .\kern .5em }Test interfejsu sieciowego}{26}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2\relax .\kern .5em }Testy niezawodno\IeC {\'s}ci systemu}{27}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4\relax .\kern .5em }Wyniki pomiar\IeC {\'o}w}{27}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1\relax .\kern .5em }Charakterystyki napi\IeC {\k e}cia spr\IeC {\'o}bkowanego przetwornikiem ADC MAX1202}{27}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2\relax .\kern .5em }Analiza FFT sygna\IeC {\l }u sinusoidalnego}{29}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.3\relax .\kern .5em }Pomiary ci\IeC {\'s}nienia czujnikiem LPS25H}{31}{subsection.5.4.3}
+\contentsline {section}{\numberline {5.5\relax .\kern .5em }Analiza wynik\IeC {\'o}w}{32}{section.5.5}
+\contentsline {subsection}{\numberline {5.5.1\relax .\kern .5em }Prezentacja i wizualizacja danych pomiarowych}{32}{subsection.5.5.1}
+\contentsline {chapter}{\numberline {6\relax .\kern .5em }Podsumowanie}{33}{chapter.6}
+\contentsline {chapter}{Bibliografia}{35}{chapter*.6}

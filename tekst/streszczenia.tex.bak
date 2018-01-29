@@ -11,6 +11,13 @@ Praca zawiera opis projektu i implementacji sieciowego systemu akwizycji danych 
 \bigskip
 {\noindent\bf Słowa kluczowe:} system akwizycji danych, Raspberry Pi, sieć
 
+\clearpage
+\setcounter{page}{1}
+\mbox{}
+
+\clearpage
+
+
 %\vskip 2cm
 \newpage
 
@@ -25,5 +32,9 @@ The last part of the thesis is the assumption with capabities for futher develop
 
 \bigskip
 {\noindent\bf Keywords:} data aquisition system, Raspberry Pi, netowrk
+
+\clearpage
+\mbox{}
+\clearpage
 
 \vfill

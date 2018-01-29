@@ -72,13 +72,13 @@ Moduł RTC z zasilaniem bateryjnym przedstawiono na Rys. \ref{pic:rtc}.
 System składa się z platformy Raspberry Pi używanej jako komputer główny oraz dołączanej płytki pomiarowej umożliwiającej podłączenie czujników z możliwością łatwego doprowadzenia zasilania do wszystkich urządzeń. Platforma Raspberry Pi zapewnia w systemie kontrolę pomiarów i pozwala na wizualizację oraz udostępnianie otrzymanych wyników. 
 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=14cm]{rpi}
 	\caption{Raspberry Pi 3 Model B} 
 	\label{pic:RPi}
 \end{figure}
-
+\newpage
 \subsection{Platforma Raspberry Pi}
 
 Raspberry Pi to jednopłytkowa platforma stworzona przez Raspberry Pi Foundation. Pierwsza wersja minikomputera powstała w roku 2012 i była oparta o układ firmy Broadcom BCM2835 SoC (z ang. System on Chip - System wbudowany) oraz procesor graficzny Broadcom VideoCore IV. Głównymi zaletami platformy były niska cena w stosunku do możliwości.
@@ -87,10 +87,10 @@ Rozważano zastosowanie w pracy jednej z trzech wersji płytki:
 \begin{itemize}
 \item Raspberry Pi ZeroW
 \item Raspberry Pi 2 Model B
-\item Raspberry Pi 3 Model B, 
+\item Raspberry Pi 3 Model B 
 \end{itemize}
 
-\begin{table}[t]
+\begin{table}[h]
 \label{tabRpi}
 \centering
 \begin{tabular}{|l|c|c|c|}
@@ -116,7 +116,7 @@ w równocześnie z obsługą protokołu sieciowego oraz konieczność instalacji
 
 Platforma Raspberry Pi w wersji 3 posiada liczne złącza m.in.: HDMI, Ethernet, 4 porty USB 2.0, wyjście 3,5mm jack, złącze kart microSD oraz 40-pinowe złącze GPIO. W tabeli poniżej przedstawiono specyfikacje wersji płytki użytej w projekcie - Raspberry Pi 3 Model B:
 
-\begin{table}[t]
+\begin{table}[h]
 \label{tabRpi}
 \centering
 \begin{tabular}{|l|l|}

@@ -133,6 +133,11 @@
   
  \@miasto\ \@rok
  \end{center}
+ \clearpage
+\mbox{}
+\setcounter{page}{0}
+\clearpage
+
  }
 }
 
@@ -175,6 +180,12 @@ Oświadczam\@ifundefined{@authorII}{\relax}{y} ponadto, że niniejsza wersja pra
 \bigskip
 \@ifundefined{@authorII}{\relax}{\noindent\@authorII ..................................\kern1cm}
 \thispagestyle{empty}
+
+\clearpage
+\mbox{}
+\setcounter{page}{0}
+\clearpage
+
 
 }
 \cleardoublepage

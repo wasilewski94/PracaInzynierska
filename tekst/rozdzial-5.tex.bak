@@ -33,7 +33,7 @@ Sprawdzenie parametrów pomiaru napięcia przetwornika analogowo-cyfrowego przep
 \subsection{Test interfejsu sieciowego}
 
 Wykonano test działania interfejsów sieciowych systemu użytkownika pod kątem spójności danych wysyłanych z systemu do użytkownika podłączonego przez sieć TCP/IP. Połączenie użytkownika korzystającego z przeglądarki w komputerze osobistym z systemem akwizycji danych było zestawione przy wykorzystaniu routera Wi-Fi.
- 
+
 
 \subsection{Testy niezawodności systemu}
 
@@ -171,7 +171,7 @@ N - ilość zebranych próbek
 
 
 \subsection{Prezentacja i wizualizacja danych pomiarowych}
-Optymalnym do tego zadania i znacznie ułatwiającym analizę wyników narzędziem był pakiet Pythona matplotlib. Są to pakiety zapewniające interfejs pozwalający na prezentację wyników w formie ułatwiającej analizę danych. Pliki z danymi ładowane były do aplikacji wyświetlającej wykresy w formacie pliku rozdzielanego przecinkami (csv).  
+Optymalnym do tego zadania i znacznie ułatwiającym analizę wyników narzędziem był skrypt napisany w języku Python przy wykorzystaniu pakietów numpy i matplotlib. Są to pakiety zapewniające interfejs pozwalający na prezentację wyników w formie ułatwiającej analizę danych. Pliki z danymi ładowane były do aplikacji wyświetlającej wykresy w formacie pliku rozdzielanego przecinkami (csv).  
 
 
 

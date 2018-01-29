@@ -9,23 +9,23 @@ Na Rys. \ref{fig:schplytki} przedstawiono schemat płytki zawierającej przetwor
 
 \begin{figure}[h]
 	\centering
-		\includegraphics[width=14cm]{schplytki}
+		\includegraphics[width=13cm]{schplytki}
 	\caption{Schemat płytki dołączanej do Raspberry Pi} 
 	\label{fig:schplytki}
 \end{figure}
-
+\newpage
 Na Rys.\ref{fig:plytka3d} trójwymiarowy wygląd płytki wygenerowany w programie Altium PCB Designer. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-		\includegraphics[width=14cm]{plytka3d}
+		\includegraphics[width=10cm]{plytka3d}
 	\caption{Trójwymiarowy wygląd projektu płytki} 
 	\label{fig:plytka3d}
 \end{figure}
 
 Ze względu na ograniczenia czasowe i optymalizację projektu pod względem kosztu podjęto decyzję zmontowania układu na płytce prototypowej. Wygląd płytki bez zamontowanych elementów przedstawiono na Rys \ref{fig:rpihat}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=12cm]{rpihat}
 	\caption{Płytka prototypowa dołączana do Raspberry Pi 2/3} 
@@ -57,7 +57,7 @@ Podłączenie przetwornika analogowo cyfrowego przez interfejs SPI do platformy 
 	\caption{Schemat podłączenia przetwornika MAX1202 do systemu} 
 	\label{fig:maxandrpi}
 \end{figure}
-
+\newpage
 Na Rys. \ref{fig:maxczasowy} przedstawiono przebiegi czasowe napięć na poszczególnych liniach interfejsu w trakcie jednej konwersji napięcia. Jak widać transmisja jednej próbki napięcia odbywa się po przesłaniu jednego bajtu konfiguracyjnego wysłanego z układu typu Master. Przetwornik dokonuje konwersji napięcia analogowego z wybranego kanału i wysyła dwa bajty zawierające dane. Z wykresu odczytać można parametr \ang{ACQUISITION} wynoszący 1,5 $\mu$s. 
 
 
@@ -111,7 +111,6 @@ Drugi testowany układ to 18-bitowy 4-kanałowy przetwornik MCP 3424. Przetworni
 Interfejs szeregowy SPI (z ang. Serial Peripheral Interface)
 jest powszechnie wykorzystywanym synchronicznym interfejsem do komunikacji pomiędzy systemem mikroprocesorowym, a układami peryferyjnymi. Interfejs pozwala na podłączenie tylko jednego układu typu Master komunikującego się z układami typu Slave w trybie full-duplex. Urządzenia podłączone do jednej magistrali muszą mieć jednakowe poziomy logiczne.
 
-\newpage
 
 Transmisja odbywa się za pomocą czterech linii:
 \begin{itemize}
@@ -160,15 +159,22 @@ Porównanie zostało wykonane pod kątem zastosowania do połączenia układów 
 \caption{Parametry transmisji interfejsów SPI i I2C} 
 \end{table}
 
+\section{Sterowanie pinami GPIO}
+
+System akwizycji danych powinien dawać możliwość podłączenia czujników i wyzwolenia pomiaru. Aby zapewnić rozszerzalność systemu o kolejne moduły użytkownik powinien mieć możliwość sterowania pinami GPIO, w celu ustawienia konfiguracji dołączonego urządzenia, bądź wyzwolenia pomiaru.
+Pakiet pythona \ang{RPi.GPIO} udostępnia przystępne API pozwalające niewielkim wysiłkiem sterować pinami GPIO.\ref{rpi.gpio}
+
 \section{Pozostałe czujniki podłączane do systemu przez magistralę I$^2$C}
 
 W celu wykonania akwizycji danych pomiarowych wykorzystano dwa moduły z czujnikami ciśnienia, wilgotności powietrza oraz temperatury. Układy są  podłączane przez magistralę I$^2$C do płytki Raspberry Pi. Moduły zawierają sensory mierzące wartości warunków atmosferycznych w postaci układów scalonych typu MEMS (z ang. Micro Electro-Mechanical System - Mikrosystemy elektromechaniczne).
+
+\newpage
 
 \subsection{Moduł z czujnikiem ciśnienia i temperatury LPS25H}
 
 Moduł LPS25H od firmy Pololu zawiera barometr mierzący ciśnienie atmosferyczne w zakresie: 260 mbar - 1260 mbar (26 kPa - 126 kPa). W trybie wysokiej rozdzielczości czujnik mierzy z dokładnością 0,2 mbar (0,02kPa).
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=10cm]{pololu}
 	\caption{Moduł z czujnikiem ciśnienia i temperatury Pololu LPS25} 
@@ -179,7 +185,7 @@ Moduł LPS25H od firmy Pololu zawiera barometr mierzący ciśnienie atmosferyczn
 
 Moduł HTS221 zawiera sensor wilgotności i temperatury firmy STMicroelectronics. Zakres pomiaru temperatury to 0 - 60\degree C, a wilgotności powietrza: 0 - 100\%. Układ obsługuje interfejsy I$^2$C lub SPI. Na płytce znajduje się konwerter poziomów napięć co umożliwia współpracę układu z urządzeniami o poziomach 3,3V oraz 5V i stabilizator napięcia.
 
-\begin{figure}[t!]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=8cm]{hts221}
 	\caption{Moduł z czujnikiem wilgotności i temperatury HTS221} 
@@ -188,7 +194,7 @@ Moduł HTS221 zawiera sensor wilgotności i temperatury firmy STMicroelectronics
 
 Moduły miały podobny rozstaw pinów co umożliwiło podłączenie ich do wspólnej szyny.
 
-\begin{figure}[b!]
+\begin{figure}[H]
 	\centering
 		\includegraphics[width=10cm]{rpiczujniki}
 	\caption{Podłączenie zewnętrznych czujników do płytki} 

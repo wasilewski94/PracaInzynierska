@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.22)  29 JAN 2018 03:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.22)  29 JAN 2018 08:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1132,7 +1132,7 @@ LaTeX Font Info:    Try loading font information for T1+phv on input line 117.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
-<PWHead.png, id=256, 2015.53pt x 320.19624pt>
+<PWHead.png, id=260, 2015.53pt x 320.19624pt>
 File: PWHead.png Graphic file (type png)
 <use PWHead.png>
 Package pdftex.def Info: PWHead.png  used on input line 117. on input line 117.
@@ -1144,7 +1144,7 @@ Overfull \hbox (31.10086pt too wide) in paragraph at lines 117--117
 [] 
  []
 
-<inzhead.png, id=258, 1392.20125pt x 303.1325pt>
+<inzhead.png, id=262, 1392.20125pt x 303.1325pt>
 File: inzhead.png Graphic file (type png)
 <use inzhead.png>
 Package pdftex.def Info: inzhead.png  used on input line 117. on input line 117
@@ -1188,11 +1188,21 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 117.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (./streszczenia.tex
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./PWHead.png> <./inzhead.p
-ng (PNG copy)>] [2]) [3]
+ng (PNG copy)>]
+[0
+
+] (./streszczenia.tex [1
+
+] [1
+
+] [2
+
+] [3
+
+])
 Underfull \hbox (badness 2680) in paragraph at lines 117--117
 \T1/cmr/m/n/12 dy-plo-mowa in-»y-nier-ska pt. Ra-sp-berry Pi jako zop-ty-ma-li-
 zo-wany pod
@@ -1207,10 +1217,14 @@ czna z
 [4
 
 
+
+] [0
+
 ] (./main.toc
 LaTeX Font Info:    External font `plex10' loaded for size
 (Font)              <10.95> on input line 2.
  [1
+
 
 
 
@@ -1287,7 +1301,7 @@ Underfull \hbox (badness 1874) in paragraph at lines 11--12
 -tli-wo-±ci¡
  []
 
-<daq_ni_usb6008.jpeg, id=371, 769.87625pt x 699.61375pt>
+<daq_ni_usb6008.jpeg, id=388, 769.87625pt x 699.61375pt>
 File: daq_ni_usb6008.jpeg Graphic file (type jpg)
 <use daq_ni_usb6008.jpeg>
 Package pdftex.def Info: daq_ni_usb6008.jpeg  used on input line 15. on input l
@@ -1309,7 +1323,7 @@ has been already used, duplicate ignored
                                                   \fi \fi 
 l.23 
       <./daq_ni_usb6008.jpeg>]
-<analog_discovery2.png, id=379, 803.0pt x 803.0pt>
+<analog_discovery2.png, id=397, 803.0pt x 803.0pt>
 File: analog_discovery2.png Graphic file (type png)
 <use analog_discovery2.png>
 Package pdftex.def Info: analog_discovery2.png  used on input line 34. on input
@@ -1367,7 +1381,7 @@ Underfull \hbox (badness 1924) in paragraph at lines 53--56
 und za-le»n¡ od
  []
 
-<rtc.png, id=388, 235.88126pt x 239.89626pt>
+<rtc.png, id=406, 235.88126pt x 239.89626pt>
 File: rtc.png Graphic file (type png)
 <use rtc.png>
 Package pdftex.def Info: rtc.png  used on input line 65. on input line 65.
@@ -1386,7 +1400,7 @@ j pod-ª¡-cze-nie
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [5]
-<rpi.JPG, id=395, 1218.80344pt x 813.0375pt>
+<rpi.JPG, id=413, 1218.80344pt x 813.0375pt>
 File: rpi.JPG Graphic file (type jpg)
 <use rpi.JPG>
 Package pdftex.def Info: rpi.JPG  used on input line 77. on input line 77.
@@ -1402,20 +1416,20 @@ Overfull \hbox (8.33858pt too wide) in paragraph at lines 77--78
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.85 
-     pdfTeX warning (ext4): destination with the same identifier (name{figure.2
-.4}) has been already used, duplicate ignored
+l.81 \newpage
+             pdfTeX warning (ext4): destination with the same identifier (name{
+figure.2.4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.85 
-      <./rtc.png> <./rpi.JPG>]
+l.81 \newpage
+              <./rtc.png> <./rpi.JPG>]
 Underfull \hbox (badness 4120) in paragraph at lines 114--116
 []\T1/cmr/m/n/12 Ze wzgl¦du na maªe ró»-nice w ce-nie i za-ªo-»e-nie za-sto-so-
 wa-nia
  []
 
-<rpipinout.png, id=404, 222.62483pt x 152.2931pt>
+<rpipinout.png, id=422, 222.62483pt x 152.2931pt>
 File: rpipinout.png Graphic file (type png)
 <use rpipinout.png>
 Package pdftex.def Info: rpipinout.png  used on input line 148. on input line 1
@@ -1442,15 +1456,14 @@ czone przez
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.159 \subsection{ZaÅ‚oÅ¼enia oprogramowania}
-                                             pdfTeX warning (ext4): destination
- with the same identifier (name{table.2.2}) has been already used, duplicate ig
-nored
+l.158 
+      pdfTeX warning (ext4): destination with the same identifier (name{table.2
+.2}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.159 \subsection{ZaÅ‚oÅ¼enia oprogramowania}
-                                             ]
+l.158 
+      ]
 Underfull \hbox (badness 10000) in paragraph at lines 161--163
 []\T1/cmr/m/n/12 Oprogramowanie po-winno umo»-li-wia¢ prze-pro-wa-dze-nie wy-da
 j-nej
@@ -1486,22 +1499,19 @@ Underfull \hbox (badness 1755) in paragraph at lines 165--167
 -niony,
  []
 
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5}
+) has been already used, duplicate ignored
 
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.167 
+       <./rpipinout.png>]
 Underfull \hbox (badness 1803) in paragraph at lines 171--173
 []\T1/cmr/m/n/12 Protokóª MQTT jest opar-tym na pu-bli-ka-cji i sub-skryp-cji l
 ek-kim
  []
 
-
-Underfull \vbox (badness 1515) has occurred while \output is active []
-
- [8pdfTeX warning (ext4): destination with the same identifier (name{figure.2.5
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.173 
-       <./rpipinout.png>]) (./rozdzial-3.tex [9]
+) (./rozdzial-3.tex [9]
 Rozdzia\l  3.
 
 Underfull \hbox (badness 3449) in paragraph at lines 6--8
@@ -1521,85 +1531,74 @@ Underfull \hbox (badness 1859) in paragraph at lines 6--8
 -ka-cji z
  []
 
-<schplytki.png, id=426, 1076.22075pt x 472.76625pt>
+<schplytki.png, id=444, 1076.22075pt x 472.76625pt>
 File: schplytki.png Graphic file (type png)
 <use schplytki.png>
 Package pdftex.def Info: schplytki.png  used on input line 12. on input line 12
 .
-Package pdftex.def Info: Requested size: 398.33858pt x 174.98569pt on input lin
+Package pdftex.def Info: Requested size: 369.88582pt x 162.48413pt on input lin
 e 12.
-
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 12--13
- [][] 
- []
-
-<plytka3d.png, id=428, 835.32076pt x 459.51675pt>
-File: plytka3d.png Graphic file (type png)
-<use plytka3d.png>
-Package pdftex.def Info: plytka3d.png  used on input line 21. on input line 21.
-
-Package pdftex.def Info: Requested size: 398.33858pt x 219.12814pt on input lin
-e 21.
-
-Overfull \hbox (8.33858pt too wide) in paragraph at lines 21--22
- [][] 
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \hbox (badness 7451) in paragraph at lines 26--27
-\T1/cmr/m/n/12 wzgl¦-dem kosztu pod-j¦to de-cy-zj¦ zmon-to-wa-nia ukªadu na pªy
-tce
- []
-
-<rpihat.jpg, id=430, 451.6875pt x 451.6875pt>
-File: rpihat.jpg Graphic file (type jpg)
-<use rpihat.jpg>
-Package pdftex.def Info: rpihat.jpg  used on input line 30. on input line 30.
-Package pdftex.def Info: Requested size: 341.43306pt x 341.45273pt on input lin
-e 30.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Underfull \vbox (badness 4156) has occurred while \output is active []
-
- [10
+[10
 
 pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1}) 
 has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
+l.16 \newpage
+              <./schplytki.png>]
+<plytka3d.png, id=451, 835.32076pt x 459.51675pt>
+File: plytka3d.png Graphic file (type png)
+<use plytka3d.png>
+Package pdftex.def Info: plytka3d.png  used on input line 21. on input line 21.
+
+Package pdftex.def Info: Requested size: 284.52756pt x 156.5211pt on input line
+ 21.
+
+Underfull \hbox (badness 7451) in paragraph at lines 26--27
+\T1/cmr/m/n/12 wzgl¦-dem kosztu pod-j¦to de-cy-zj¦ zmon-to-wa-nia ukªadu na pªy
+tce
+ []
+
+<rpihat.jpg, id=453, 451.6875pt x 451.6875pt>
+File: rpihat.jpg Graphic file (type jpg)
+<use rpihat.jpg>
+Package pdftex.def Info: rpihat.jpg  used on input line 30. on input line 30.
+Package pdftex.def Info: Requested size: 341.43306pt x 341.45273pt on input lin
+e 30.
+[11pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
 l.41 \item c
-            ena ukÅ‚adu, <./schplytki.png>]
-<max1202_sch.png, id=440, 1178.4025pt x 893.3375pt>
+            ena ukÅ‚adu,pdfTeX warning (ext4): destination with the same identi
+fier (name{figure.3.3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.41 \item c
+            ena ukÅ‚adu, <./plytka3d.png> <./rpihat.jpg>]
+<max1202_sch.png, id=462, 1178.4025pt x 893.3375pt>
 File: max1202_sch.png Graphic file (type png)
 <use max1202_sch.png>
 Package pdftex.def Info: max1202_sch.png  used on input line 56. on input line 
 56.
 Package pdftex.def Info: Requested size: 284.52756pt x 215.70033pt on input lin
 e 56.
+ [12pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+4}) has been already used, duplicate ignored
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.60 \newpage
+              <./max1202_sch.png>]
 Underfull \hbox (badness 6825) in paragraph at lines 61--62
 \T1/cmr/m/n/12 li-niach in-ter-fejsu w trak-cie jed-nej kon-wer-sji na-pi¦-cia.
  Jak wi-da¢
  []
 
-[11pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.62 
-      <./plytka3d.png>]
-<max1202time.png, id=449, 1246.6575pt x 408.52625pt>
+<max1202time.png, id=472, 1246.6575pt x 408.52625pt>
 File: max1202time.png Graphic file (type png)
 <use max1202time.png>
 Package pdftex.def Info: max1202time.png  used on input line 66. on input line 
@@ -1611,19 +1610,13 @@ Overfull \hbox (8.33858pt too wide) in paragraph at lines 66--67
  [][] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-<mcp3424_fun.png, id=450, 838.13126pt x 520.94624pt>
+<mcp3424_fun.png, id=473, 838.13126pt x 520.94624pt>
 File: mcp3424_fun.png Graphic file (type png)
 <use mcp3424_fun.png>
 Package pdftex.def Info: mcp3424_fun.png  used on input line 78. on input line 
 78.
 Package pdftex.def Info: Requested size: 284.52756pt x 176.8491pt on input line
  78.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
 
 Overfull \hbox (15.8681pt too wide) in paragraph at lines 86--105
 [][]
@@ -1647,141 +1640,143 @@ Underfull \hbox (badness 2253) in paragraph at lines 111--113
 u Ma-ster
  []
 
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.114 \newpage
-               <./rpihat.jpg>]
-Underfull \hbox (badness 3049) in paragraph at lines 124--125
+l.113 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3.6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.113 
+       <./max1202time.png> <./mcp3424_fun.png>]
+Underfull \hbox (badness 3049) in paragraph at lines 123--124
 []\T1/cmr/m/n/12 Przetwornik, któ-rego u»yto jest w sta-nie ko-mu-ni-ko-wa¢ si¦
  przy
  []
 
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <14.4> on input line 127.
+(Font)              <14.4> on input line 126.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <10> on input line 127.
+(Font)              <10> on input line 126.
 LaTeX Font Info:    External font `plex10' loaded for size
-(Font)              <7> on input line 127.
+(Font)              <7> on input line 126.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 127.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 127.
+(hyperref)                removing `math shift' on input line 126.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 127.
+(hyperref)                removing `superscript' on input line 126.
 
-[13pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
-}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.131 \item
-            SDA (Serial Data Line),pdfTeX warning (ext4): destination with the 
-same identifier (name{figure.3.5}) has been already used, duplicate ignored
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 126.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.131 \item
-            SDA (Serial Data Line), <./max1202_sch.png> <./max1202time.png>]
-Underfull \hbox (badness 2837) in paragraph at lines 139--140
+
+Underfull \hbox (badness 2837) in paragraph at lines 138--139
 \T1/cmr/m/n/12 ukªa-dów w sys-te-mie akwi-zy-cji da-nych. W ta-beli 3.1 przed-s
 ta-wiono
  []
 
+[14pdfTeX warning (ext4): destination with the same identifier (name{table.3.1}
+) has been already used, duplicate ignored
 
-Overfull \hbox (6.14413pt too wide) in paragraph at lines 144--160
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.139 
+      ]
+Overfull \hbox (6.14413pt too wide) in paragraph at lines 143--159
 [][]
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 163.
+LaTeX Warning: Reference `rpi.gpio' on page 15 undefined on input line 165.
+
+
+Underfull \hbox (badness 3758) in paragraph at lines 164--166
+[]\T1/cmr/m/n/12 System akwi-zy-cji da-nych po-wi-nien da-wa¢ mo»-li-wo±¢ pod-ª
+¡-cze-nia
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 164--166
+\T1/cmr/m/n/12 GPIO, w celu usta-wie-nia kon-fi-gu-ra-cji do-ª¡-czo-nego urz¡-d
+ze-nia, b¡d¹
+ []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `superscript' on input line 163.
+(hyperref)                removing `math shift' on input line 167.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 163.
+(hyperref)                removing `superscript' on input line 167.
 
-[14pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
-}) has been already used, duplicate ignored
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 167.
+
+[15pdfTeX warning (ext4): destination with the same identifier (name{table.3.2}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.166 
-      pdfTeX warning (ext4): destination with the same identifier (name{table.3
-.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.166 
-       <./mcp3424_fun.png>]
-<pololu.jpg, id=472, 451.6875pt x 361.35pt>
+l.171 \newpage
+              ]
+<pololu.jpg, id=495, 451.6875pt x 361.35pt>
 File: pololu.jpg Graphic file (type jpg)
 <use pololu.jpg>
-Package pdftex.def Info: pololu.jpg  used on input line 173. on input line 173.
+Package pdftex.def Info: pololu.jpg  used on input line 179. on input line 179.
 
 Package pdftex.def Info: Requested size: 284.52756pt x 227.63516pt on input lin
-e 173.
+e 179.
 
-Underfull \hbox (badness 4595) in paragraph at lines 180--181
+Underfull \hbox (badness 4595) in paragraph at lines 186--187
 []\T1/cmr/m/n/12 Moduª HTS221 za-wiera sen-sor wil-got-no-±ci i tem-pe-ra-tury 
 firmy
  []
 
-
-Underfull \vbox (badness 2635) has occurred while \output is active []
-
- [15pdfTeX warning (ext4): destination with the same identifier (name{table.3.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.181 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-3.7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.181 
-       <./pololu.jpg>]
-<hts221.jpg, id=479, 803.0pt x 803.0pt>
+<hts221.jpg, id=496, 803.0pt x 803.0pt>
 File: hts221.jpg Graphic file (type jpg)
 <use hts221.jpg>
-Package pdftex.def Info: hts221.jpg  used on input line 184. on input line 184.
+Package pdftex.def Info: hts221.jpg  used on input line 190. on input line 190.
 
 Package pdftex.def Info: Requested size: 227.62204pt x 227.61984pt on input lin
-e 184.
-<rpiczujniki.png, id=480, 3059.43pt x 2673.99pt>
+e 190.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.3.
+7}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.194 
+       <./pololu.jpg>]
+<rpiczujniki.png, id=503, 3059.43pt x 2673.99pt>
 File: rpiczujniki.png Graphic file (type png)
 <use rpiczujniki.png>
-Package pdftex.def Info: rpiczujniki.png  used on input line 193. on input line
- 193.
+Package pdftex.def Info: rpiczujniki.png  used on input line 199. on input line
+ 199.
 Package pdftex.def Info: Requested size: 284.52756pt x 248.64586pt on input lin
-e 193.
-) (./rozdzial-4.tex [16pdfTeX warning (ext4): destination with the same identif
+e 199.
+) (./rozdzial-4.tex [17pdfTeX warning (ext4): destination with the same identif
 ier (name{figure.3.8}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter{Oprogramowanie}
-                             <./hts221.jpg>] [17pdfTeX warning (ext4): destinat
-ion with the same identifier (name{figure.3.9}) has been already used, duplicat
-e ignored
+                            pdfTeX warning (ext4): destination with the same id
+entifier (name{figure.3.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.1 \chapter{Oprogramowanie}
-                             <./rpiczujniki.png (PNG copy)>]
+                             <./hts221.jpg> <./rpiczujniki.png (PNG copy)>]
 Rozdzia\l  4.
 
 Underfull \hbox (badness 1484) in paragraph at lines 8--11
@@ -1801,7 +1796,7 @@ Underfull \hbox (badness 1675) in paragraph at lines 8--11
 -wi-stego
  []
 
-<buildroot_katalogi.png, id=494, 966.61125pt x 623.32875pt>
+<buildroot_katalogi.png, id=512, 966.61125pt x 623.32875pt>
 File: buildroot_katalogi.png Graphic file (type png)
 <use buildroot_katalogi.png>
 Package pdftex.def Info: buildroot_katalogi.png  used on input line 17. on inpu
@@ -1820,7 +1815,7 @@ Underfull \hbox (badness 5924) in paragraph at lines 22--24
 [18
 
 ]
-<buildroot_menu.png, id=502, 1275.76625pt x 844.15375pt>
+<buildroot_menu.png, id=520, 1275.76625pt x 844.15375pt>
 File: buildroot_menu.png Graphic file (type png)
 <use buildroot_menu.png>
 Package pdftex.def Info: buildroot_menu.png  used on input line 31. on input li
@@ -1955,7 +1950,7 @@ Underfull \hbox (badness 2762) in paragraph at lines 110--111
 -duª ten po-zwala na od-czyt da-nych
  []
 
-<i2cdetect.png, id=535, 977.6525pt x 574.145pt>
+<i2cdetect.png, id=553, 977.6525pt x 574.145pt>
 File: i2cdetect.png Graphic file (type png)
 <use i2cdetect.png>
 Package pdftex.def Info: i2cdetect.png  used on input line 116. on input line 1
@@ -1977,13 +1972,30 @@ Underfull \hbox (badness 3118) in paragraph at lines 124--129
  dane[[]]
  []
 
-[23]) (./rozdzial-5.tex [24pdfTeX warning (ext4): destination with the same ide
-ntifier (name{figure.4.3}) has been already used, duplicate ignored
+[23]
+<aplikacjaWeb.png, id=563, 493.845pt x 393.47pt>
+File: aplikacjaWeb.png Graphic file (type png)
+<use aplikacjaWeb.png>
+Package pdftex.def Info: aplikacjaWeb.png  used on input line 139. on input lin
+e 139.
+Package pdftex.def Info: Requested size: 284.52756pt x 226.69377pt on input lin
+e 139.
+
+Underfull \vbox (badness 6559) has occurred while \output is active []
+
+ [24pdfTeX warning (ext4): destination with the same identifier (name{figure.4.
+3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.1 \chapter{Testy}
-                    <./i2cdetect.png>]
+l.146 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+4.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.146 
+       <./i2cdetect.png> <./aplikacjaWeb.png>]) (./rozdzial-5.tex [25]
 Rozdzia\l  5.
 
 Underfull \hbox (badness 6792) in paragraph at lines 4--5
@@ -2014,7 +2026,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 []\T1/cmr/m/n/12 Sprawdzenie pa-ra-me-trów po-miaru na-pi¦-cia prze-twor-nika
  []
 
-<stanowisko.jpg, id=550, 4047.12pt x 3035.34pt>
+<stanowisko.jpg, id=576, 4047.12pt x 3035.34pt>
 File: stanowisko.jpg Graphic file (type jpg)
 <use stanowisko.jpg>
 Package pdftex.def Info: stanowisko.jpg  used on input line 24. on input line 2
@@ -2042,7 +2054,7 @@ Underfull \hbox (badness 4859) in paragraph at lines 40--42
 soli \T1/cmr/m/it/12 ssh
  []
 
-[25
+[26
 
 ]
 Underfull \hbox (badness 5607) in paragraph at lines 51--55
@@ -2056,7 +2068,7 @@ Underfull \hbox (badness 1629) in paragraph at lines 51--55
 wano prze-bieg
  []
 
-<sin_max1202_100Hz_adc.png, id=558, 1387.584pt x 735.7086pt>
+<sin_max1202_100Hz_adc.png, id=584, 1387.584pt x 735.7086pt>
 File: sin_max1202_100Hz_adc.png Graphic file (type png)
 <use sin_max1202_100Hz_adc.png>
 Package pdftex.def Info: sin_max1202_100Hz_adc.png  used on input line 58. on i
@@ -2068,21 +2080,21 @@ Overfull \hbox (8.33858pt too wide) in paragraph at lines 58--59
 [][]
  []
 
-[26pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+[27pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.61 \end{figure}
                   <./stanowisko.jpg>]
-<sin_max1202_100Hz_osc.png, id=566, 659.46375pt x 416.55624pt>
+<sin_max1202_100Hz_osc.png, id=593, 659.46375pt x 416.55624pt>
 File: sin_max1202_100Hz_osc.png Graphic file (type png)
 <use sin_max1202_100Hz_osc.png>
 Package pdftex.def Info: sin_max1202_100Hz_osc.png  used on input line 67. on i
 nput line 67.
 Package pdftex.def Info: Requested size: 341.43306pt x 215.67613pt on input lin
 e 67.
-<zmiennosc_probkowania_max1202.png, id=568, 648.9846pt x 346.896pt>
+<zmiennosc_probkowania_max1202.png, id=595, 648.9846pt x 346.896pt>
 File: zmiennosc_probkowania_max1202.png Graphic file (type png)
 <use zmiennosc_probkowania_max1202.png>
 Package pdftex.def Info: zmiennosc_probkowania_max1202.png  used on input line 
@@ -2103,7 +2115,7 @@ wa-nia przy u»y-ciu
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<rect_max1202_100Hz_adc.png, id=571, 1387.584pt x 735.7086pt>
+<rect_max1202_100Hz_adc.png, id=598, 1387.584pt x 735.7086pt>
 File: rect_max1202_100Hz_adc.png Graphic file (type png)
 <use rect_max1202_100Hz_adc.png>
 Package pdftex.def Info: rect_max1202_100Hz_adc.png  used on input line 111. on
@@ -2115,7 +2127,7 @@ Overfull \hbox (36.79134pt too wide) in paragraph at lines 111--112
  [][] 
  []
 
-[27pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
+[28pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2131,7 +2143,7 @@ l.114 \end{figure}
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<rect_max1202_100Hz_osc.png, id=580, 803.0pt x 504.88625pt>
+<rect_max1202_100Hz_osc.png, id=607, 803.0pt x 504.88625pt>
 File: rect_max1202_100Hz_osc.png Graphic file (type png)
 <use rect_max1202_100Hz_osc.png>
 Package pdftex.def Info: rect_max1202_100Hz_osc.png  used on input line 119. on
@@ -2147,7 +2159,7 @@ Underfull \hbox (badness 1590) in paragraph at lines 126--128
 e do wek-tora
  []
 
-<sin_fft_ideal.png, id=582, 651.8754pt x 376.5267pt>
+<sin_fft_ideal.png, id=609, 651.8754pt x 376.5267pt>
 File: sin_fft_ideal.png Graphic file (type png)
 <use sin_fft_ideal.png>
 Package pdftex.def Info: sin_fft_ideal.png  used on input line 132. on input li
@@ -2162,7 +2174,7 @@ Overfull \hbox (8.33858pt too wide) in paragraph at lines 132--133
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [28pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [29pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 4}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2180,7 +2192,7 @@ Underfull \hbox (badness 2359) in paragraph at lines 137--138
  prze-twor-nika
  []
 
-<sin_fft_max1202.png, id=595, 654.0435pt x 375.0813pt>
+<sin_fft_max1202.png, id=621, 654.0435pt x 375.0813pt>
 File: sin_fft_max1202.png Graphic file (type png)
 <use sin_fft_max1202.png>
 Package pdftex.def Info: sin_fft_max1202.png  used on input line 142. on input 
@@ -2195,7 +2207,7 @@ Overfull \hbox (8.33858pt too wide) in paragraph at lines 142--143
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [30pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 5}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2219,7 +2231,7 @@ Underfull \hbox (badness 1642) in paragraph at lines 149--150
 -±ci. Po
  []
 
-<winda.png, id=604, 869.4081pt x 367.8543pt>
+<winda.png, id=630, 869.4081pt x 367.8543pt>
 File: winda.png Graphic file (type png)
 <use winda.png>
 Package pdftex.def Info: winda.png  used on input line 154. on input line 154.
@@ -2233,7 +2245,7 @@ Overfull \hbox (8.33858pt too wide) in paragraph at lines 154--155
 
 Underfull \vbox (badness 1668) has occurred while \output is active []
 
- [30pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+ [31pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
 6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2263,7 +2275,13 @@ Underfull \hbox (badness 6978) in paragraph at lines 161--163
 ze-bra-nia
  []
 
-) (./rozdzial-6.tex [31pdfTeX warning (ext4): destination with the same identif
+
+Underfull \hbox (badness 3049) in paragraph at lines 174--175
+\T1/cmr/m/n/12 pa-kie-tów numpy i mat-plo-tlib. S¡ to pa-kiety za-pew-nia-j¡ce 
+in-ter-fejs
+ []
+
+) (./rozdzial-6.tex [32pdfTeX warning (ext4): destination with the same identif
 ier (name{figure.5.9}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2290,36 +2308,38 @@ Underfull \hbox (badness 2189) in paragraph at lines 9--11
  []
 
 
+Underfull \hbox (badness 5592) in paragraph at lines 12--13
+\T1/cmr/m/n/12 da-nych z za-cho-wa-niem jak naj-peª-niej-szej (w gra-ni-cach mo
+»-li-wo-±ci
+ []
+
+
 Underfull \hbox (badness 1603) in paragraph at lines 14--15
 \T1/cmr/m/n/12 Prze-twor-nik prze-te-sto-wano rów-nie» za po-moc¡ wªa-snego ste
 -row-nika i
  []
 
 
-Underfull \hbox (badness 4792) in paragraph at lines 16--17
-\T1/cmr/m/n/12 GPIO spra-wia, »e u»yt-kow-nik jest w sta-nie roz-sze-rza¢ sys-t
-em o
+Underfull \hbox (badness 1939) in paragraph at lines 16--17
+\T1/cmr/m/n/12 mi-ni-kom-pu-te-rem do-st¦p-nym w ni-skiej ce-nie, za-pew-nia u»
+yt-kow-ni-kowi
  []
 
-) (./bibliografia.tex
-Underfull \hbox (badness 4792) in paragraph at lines 18--1
+[33
+
+]) (./bibliografia.tex
+Underfull \hbox (badness 4792) in paragraph at lines 19--1
 \T1/cmr/m/n/12 jako sta-cja me-te-oro-lo-giczna z mo»-li-wo-±ci¡ zdal-nego do-s
 t¦pu dzi¦ki
  []
 
 
-Underfull \hbox (badness 3557) in paragraph at lines 18--1
+Underfull \hbox (badness 3557) in paragraph at lines 19--1
 \T1/cmr/m/n/12 ko-mu-ni-ka-cji sie-cio-wej. Roz-wi¡-za-nia za-warte w pro-jek-c
 ie umo»-li-wiaj¡
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [32
-
-]
-[33]) [34
+[34]) [35
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 130.
@@ -2328,7 +2348,10 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 130.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 130.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 130.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AEBA07D86AB32DA24E1E32BC1A458624;4618.
+(rerunfilecheck)             Checksum: F11E5D7F248F4E771CD4F5F0108F0A5E;4687.
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -2336,10 +2359,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 130.
  ) 
 Here is how much of TeX's memory you used:
- 18921 strings out of 492990
- 340992 string characters out of 6135004
- 420998 words of memory out of 5000000
- 21869 multiletter control sequences out of 15000+600000
+ 18934 strings out of 492990
+ 341183 string characters out of 6135004
+ 421138 words of memory out of 5000000
+ 21877 multiletter control sequences out of 15000+600000
  31899 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,9n,56p,1027b,483s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2361,10 +2384,10 @@ exmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/pub
 lic/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti109
 5.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
-Output written on main.pdf (40 pages, 15075989 bytes).
+Output written on main.pdf (45 pages, 15096337 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 621 compressed objects within 7 object streams
- 146 named destinations out of 1000 (max. 500000)
- 649 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 758 PDF objects out of 1000 (max. 8388607)
+ 641 compressed objects within 7 object streams
+ 150 named destinations out of 1000 (max. 500000)
+ 662 words of extra memory for PDF output out of 10000 (max. 10000000)
 

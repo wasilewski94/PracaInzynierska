@@ -131,5 +131,18 @@ Program odpowiadający za odebranie danych zawiera informację na temat połącz
 
 \subsection{Aplikacja webowa}
 
-Aplikacja webowa została napisana w języku php i html i jest programem uruchamianym na serwerze i zapewnia graficzny interfejs. Użytkownik jest w stanie uruchomić proces oraz go wyłączyć, korzystając z identyfikatora procesu zwracanego przez funkcję  \ang{shell\_exec}. Identyfikator uruchomionego procesu zapisywany jest w pliku pid.txt. Dane zebrane przez czujniki zapisywane są w pliku tekstowym w katalogu, z którego była wywołana aplikacja. W przypadku wywołania z aplikacji internetowej jest to katalog \ang{/var/www/html}. Parametry akwizycji danych mogę być ustawiane z poziomu aplikacji internetowej i zapisane do pliku konfiguracyjnego. Informacja o parametrach pomiarów jest wczytywana z pliku konfiguracyjnego przez program obsługujący dany czujnik. Po odebraniu próbki użytkownik jest w stanie podejrzeć aktualną wartość odczytaną z sensora uruchamiając aplikacją obsługującą protokół MQTT. 
+Aplikacja webowa została napisana w języku php i html i jest programem uruchamianym na serwerze i zapewnia graficzny interfejs. Użytkownik jest w stanie uruchomić proces oraz go wyłączyć, korzystając z identyfikatora procesu zwracanego przez funkcję  \ang{shell\_exec}. Identyfikator uruchomionego procesu zapisywany jest w pliku pid.txt. Na Rys. \ref{fig:aplikacjaWeb} zamieszczono zrzut ekranu z działającej aplikacji w przeglądarce na komputerze użytkownika systemu. 
+
+
+\begin{figure}[H]
+	\centering
+		\includegraphics[width=10cm]{aplikacjaWeb}
+	\caption{Zrzut ekranu działającej aplikacji webowej} 
+	\label{fig:aplikacjaWeb}
+\end{figure}
+
+
+Dane zebrane przez czujniki zapisywane są w pliku tekstowym w katalogu, z którego była wywołana aplikacja. W przypadku wywołania z aplikacji internetowej jest to katalog \ang{/var/www/html}. Parametry akwizycji danych mogę być ustawiane z poziomu aplikacji internetowej i zapisane do pliku konfiguracyjnego. Informacja o parametrach pomiarów jest wczytywana z pliku konfiguracyjnego przez program obsługujący dany czujnik. Po odebraniu próbki użytkownik jest w stanie podejrzeć aktualną wartość odczytaną z sensora uruchamiając aplikację obsługującą protokół MQTT.
+
+
 

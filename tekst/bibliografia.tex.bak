@@ -56,6 +56,11 @@ I2C driver - i2c-dev documantation
 
 https://www.kernel.org/doc/Documentation/i2c/dev-interface
 
+\bibitem{rpi.gpio}
+RPi.GPIO 0.6.3 : Python Package Index
+
+https://pypi.python.org/pypi/RPi.GPIO
+
 \bibitem{spiKernel}
 Serial Peripheral Interface (SPI) — The Linux Kernel documentation, 
 
