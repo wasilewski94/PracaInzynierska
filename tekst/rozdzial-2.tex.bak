@@ -46,18 +46,18 @@ System powinien udostępniać możliwość obsługi sygnałów zarówno cyfrowyc
 Raspberry Pi może działać pod systemem operacyjnym Linux, który nie jest systemem czasu rzeczywistego, co powoduje, że w domyślnej konfiguracji systemu nie da się zagwarantować stałego odstępu czasowego pomiędzy odbieraniem próbek kolejnych z przetwornika. W celu wydajnego przetwarzania sygnałów większej częstotliwości dodano moduł do jądra systemu, zawierający implementację licznika wysokiej rozdzielczości, co powoduje zmniejszenie wahań częstotliwości próbkowania w trakcie pomiarów oraz pozwala na zachowanie momentu otrzymania próbki z dużą dokładnością.
 
 \subsection{Informacja o czasie pomiaru}
+\label{ntpSubsection}
 
 Raspberry Pi jest komputerem zoptymalizowanym pod względem kosztów i rozmiaru, co sprawia, że jest pozbawiony podzespołów, które są zbyt drogie lub zajmują zbyt dużo miejsca na płytce. Jednym z takich układów jest układ RTC (z ang. Real Time Clock - zegar czasu rzeczywistego) Układ ten jest zasilany z baterii niezależnie od komputera i zapewnia przechowywanie czasu rzeczywistego po odłączeniu zasilania. 
 
 System akwizycji danych powinien zapewniać w miarę możliwości technicznych jak najdokładniejszą informację o czasie zebrania próbki danych.
-Raspberry Pi za pomocą protokołu NTP (z ang. Network Time Protocol - Sieciowy Protokół Czasu) jest w stanie synchronizować czas w systemie do wybranego w konfiguracji protokołu serwera. Korzystając z odpowiednich serwerów, NTP jest w stanie dostosować czas systemu klienta, uwzględniając opóźnienia w transmisji danych. Protokół posiada jednak ograniczoną dokładność spowodowaną
+Raspberry Pi za pomocą protokołu NTP (z ang. Network Time Protocol - Sieciowy Protokół Czasu) jest w stanie synchronizować czas w systemie do wybranego w konfiguracji protokołu serwera. Korzystając z odpowiednich serwerów, NTP jest w stanie dostosować czas systemu klienta, uwzględniając opóźnienia w transmisji danych. 
+Protokół NTP umożliwia synchronizację z rozdzielczością rzędu nanosekund, jednak posiada ograniczoną dokładność rzędu kilkudziesięciu mikrosekund zależną od różnych czynników, m.in. od precyzji źródła czasu. 
 
 Wykorzystanie własnego sterownika do pomiaru napięcia przetwornika analogowo-cyfrowego pozwala na zebranie znacznika czasu z rozdzielczością pojedynczych nanosekund. 
 
-\subsection{Zegar czasu rzeczywistego}
-
 W przypadku, wykorzystania Raspberry Pi do pracy z ograniczonym dostępem do sieci warto dołączyć moduł zegara czasu rzeczywistego.
-Istnieje możliwość rozszerzenia systemu o moduł RTC . Na rynku są dostępne moduły obsługiwane za pomocą interfejsów szeregowych SPI lub I2C. Jednym z najbardziej popularnych modułów zegara czasu rzeczywistego kompatybilnych z Raspberry Pi jest moduł z układem DS3231\cite{rtc}. Układ zawiera niezależne zasilanie bateryjne i działa po odłączeniu Raspberry Pi od źródła napięcia.
+Istnieje możliwość rozszerzenia systemu o moduł RTC. Na rynku są dostępne moduły obsługiwane za pomocą interfejsów szeregowych SPI lub I$^2$C. Jednym z najbardziej popularnych modułów zegara czasu rzeczywistego kompatybilnych z Raspberry Pi jest moduł z układem DS3231\cite{rtc}. Układ zawiera niezależne zasilanie bateryjne i działa po odłączeniu Raspberry Pi od źródła napięcia.
 Moduł RTC z zasilaniem bateryjnym przedstawiono na Rys. \ref{pic:rtc}. 
 
 \begin{figure}[h]
@@ -93,33 +93,33 @@ Rozważano zastosowanie w pracy jednej z trzech wersji płytki:
 \begin{table}[t]
 \label{tabRpi}
 \centering
-\begin{tabular}{|l|l|l|l|}
+\begin{tabular}{|l|c|c|c|}
   \hline 
   Wersja płytki & ZeroW & 2 Model B & 3 Model B\\
   \hline
-  Procesor CPU & 1GHz ARM1176JZF-S & 1,2 GHz ARM Cortex-A53 &  900 MHz \\
+  Częstotliwość taktowania procesora &1GHz&1,2GHz&900MHz\\
   \hline
-  Pamięć RAM  512 MB & 1GB & 1 GB LPDDR2 &\\
+  Pamięć RAM&512MB&1GB&1GB\\
   \hline
- Połączenia sieciowe & 10/100 Ethernet, Wi-Fi (2,4 GHz 802.11n) \\
+ moduł WiFi & 2,4GHz & brak & 2,4GHz\\
   \hline
-
+  złącze Ethernet & brak &10/100& 10/100\\
+  \hline
 \end{tabular}
-\caption{Parametry techniczne platformy Raspberry Pi 3 Model B 
+\caption{Parametry techniczne różnych wersji płytki Raspberry Pi
 \cite{rpispecs}
 } 
 \end{table}
 
-Ze względu na małe różnice w cenie i założenie zastosowania bezprzewodowego dostępu do sieci zrezygnowano z wersji Model 2 B. Rozważano zastosowanie wersji ZeroW, która jest cenowo konkurencyjna do wersji Model 3 B i pozwala na bezprzewodowy dostęp do sieci za pomocą łącza Wi-Fi. Z powodu założenia przetwarzania dużej ilości danych przez system oraz instalacji  
-Ostatecznie wybrano 
+Ze względu na małe różnice w cenie i założenie zastosowania bezprzewodowego dostępu do sieci zrezygnowano z wersji Model 2 B. Rozważano zastosowanie wersji ZeroW, która jest cenowo konkurencyjna do wersji Model 3 B i pozwala na bezprzewodowy dostęp do sieci za pomocą modułu sieci Wi-Fi. Z powodu założenia przetwarzania dużej ilości danych przez system, współbieżnego wykonywania obsługi czujników
+w równocześnie z obsługą protokołu sieciowego oraz konieczność instalacji serwera HTTP wybrano wersję Model 3B, której parametry techniczne powinny pozwolić na spełnienie postawionych założeń.
 
- 
-Platforma Raspberry Pi w wersji 3 posiada liczne złącza m.in.: HDMI, Ethernet, 4 porty USB 2.0, wyjście 3,5mm jack, złącze kart microSD oraz 40-pinowe złącze GPIO. W tabeli poniżej przedstawiono specyfikacje wersji płytki użytej w projekcie - Raspberry Pi 3 Mdel B:
+Platforma Raspberry Pi w wersji 3 posiada liczne złącza m.in.: HDMI, Ethernet, 4 porty USB 2.0, wyjście 3,5mm jack, złącze kart microSD oraz 40-pinowe złącze GPIO. W tabeli poniżej przedstawiono specyfikacje wersji płytki użytej w projekcie - Raspberry Pi 3 Model B:
 
 \begin{table}[t]
 \label{tabRpi}
 \centering
-\begin{tabular}{|l|l|l|}
+\begin{tabular}{|l|l|}
   \hline 
   Nazwa układu SoC & Broadcom BCM2837 \\
   \hline
@@ -138,7 +138,7 @@ Platforma Raspberry Pi w wersji 3 posiada liczne złącza m.in.: HDMI, Ethernet,
  Interfejsy szeregowe & SPI, I$^2$C, UART \\ 
   \hline
 \end{tabular}
-\caption{Parametry techniczne platformy Raspberry Pi 3 Model B 
+\caption{Szczegółowe parametry techniczne platformy Raspberry Pi 3 Model B 
 \cite{rpispecs}
 } 
 \end{table}
@@ -151,7 +151,6 @@ Platforma Raspberry Pi w wersji 3 posiada liczne złącza m.in.: HDMI, Ethernet,
 \end{figure}
 
 
-
 \subsection{Płytka pomiarowa}
 
 Płytka pomiarowa, stanowiąca rozszerzenie do Raspberry Pi, miała umożliwiać podłączenie czujników do minikomputera oraz doprowadzenie do nich zasilania i została wykonana na potrzeby pracy dyplomowej. 
@@ -160,5 +159,16 @@ Zastosowanie przetwornika analogowo-cyfrowego pozwala na zbieranie danych z czuj
 \subsection{Założenia oprogramowania}
 
 Oprogramowanie powinno umożliwiać przeprowadzenie wydajnej akwizycji, bez utraty danych.
-Niezbędne jest skorzystanie z odpowiednich bibliotek i funkcji udostępnianych przez jądro systemu Linux. Aplikacje użytkownika powinny zapisywać dane do pliku w formacie umożliwiającym późniejsze przetworzenie przez aplikację obsługującą protokół sieciowy MQTT i aplikację umożliwiającą wyświetlanie danych i ustawienie konfiguracji parametrów pomiaru uruchamianą przez użytkownika w przeglądarce internetowej. Aplikacja udostępnia interfejs pozwalający na zdalne uruchomienie programów obsługujących Oprogramowanie powinno posiadać cechy przenośności tak, aby mogło działać na innych systemach wbudowanych z systemem operacyjnym Linux.
+Niezbędne jest skorzystanie z odpowiednich bibliotek i funkcji udostępnianych przez jądro systemu Linux. Aplikacje użytkownika powinny zapisywać dane do pliku w formacie umożliwiającym późniejsze przetworzenie przez aplikację obsługującą protokół sieciowy MQTT (z ang. MQ Telemetry Transport) i aplikację webową umożliwiającą wyświetlanie danych i ustawienie konfiguracji parametrów pomiaru uruchamianą przez użytkownika w przeglądarce internetowej. Aplikacja udostępnia interfejs pozwalający na zdalne uruchomienie programów obsługujących zbieranie danych z czujników na Raspberry Pi. Oprogramowanie powinno posiadać cechy przenośności tak, aby mogło działać na innych systemach wbudowanych z systemem operacyjnym Linux.
+
+\subsection{Zapewnienie niezawodności systemu}
+Niezawodność działania systemu jest bardzo istotna w przypadku sieciowego systemu akwizycji danych. Urządzenie jest przystosowane do pracy autonomicznej, więc aby zdalny dostęp mógł być zapewniony, Raspberry Pi musi być w stanie wykrywać stan zawieszenia systemu, gdyż wpływa to bezpośrednio na niezawodność i ciągłość działania. 
+W komputerze Raspberry Pi istnieje możliwość uaktywnienia układu \ang{watchdog}, zapewniającego automatyczny restart systemu w przypadku jego zawieszenia. 
+
+
+\subsection{Protokół sieciowy MQTT}
+
+Protokół MQTT jest opartym na publikacji i subskrypcji lekkim protokołem sieciowym warstwy TCP/IP\cite{mqtt}. Jest przeznaczony do transmisji wiadomości pomiędzy urządzeniami niewymagającymi dużej przepustowości. Do działania protokołu potrzebny jest broker (z ang. pośrednik), który pełni rolę serwera publikującego wiadomości. Urządzenie, zawierające dane do wysłania publikuje wiadomość podając nazwę tematu. Klient, który chce odebrać te dane zapisuje się na subskrypcję danego tematu również podając jego nazwę. 
+Protokół dobrze sprawdza się w komunikacji urządzeń IoT (z ang. Internet of Things - Internetu Rzeczy).
+
 

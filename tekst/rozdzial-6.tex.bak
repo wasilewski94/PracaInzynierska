@@ -2,7 +2,16 @@
 \label{ch:podsumowanie}
 
 
-Cel pracy został osiągnięty, stworzono projekt i oprogramowanie sieciowego systemu akwizycji danych. Założenie optymalizacji kosztu zostało spełnione, układ jest dużo tańszy od rozwiązań komercyjnych, które najczęściej wymagają wykupienia licencji na oprogramowanie pozwalające sterować pomiarami. Główną część systemu - Raspberry Pi w wersji Zero W z modułem Wifi i Bluetooth 4.1 można nabyć za około 50zł.
+Cel pracy został osiągnięty, stworzono projekt i oprogramowanie sieciowego systemu akwizycji danych. Założenie optymalizacji kosztu zostało spełnione, układ jest dużo tańszy od rozwiązań komercyjnych, które najczęściej wymagają wykupienia licencji na oprogramowanie pozwalające sterować pomiarami. Główną część systemu - Raspberry Pi w wersji Zero W z modułem Wifi i Bluetooth 4.1 można nabyć za około 50zł, jednak zastąpienie przetestowanej wersji Raspberry Pi 3 wersją ZeroW wymagałoby wykonania dodatkowych testów, gdyż różnice parametrów sprzętowych tych dwóch płytek są znaczące i mogą wprowadzać ograniczenia możliwości systemu.
+
+Opracowano sterownik przetwornika analogowo-cyfrowego podłączonego do komputera za pomocą interfejsu SPI i przetestowano pomyślnie jego działanie.
+
+Sterowniki pozostałych urządzeń obsługiwanych po magistrali I$^2$C nie zostały opracowane.
+W trakcie wykonywania pracy zdecydowano, że urządzenia podłączane przez magistralę I$^2$C zostaną obsłużone za pomocą modułu \ang{i2cdev}, gdyż nie wymagają próbkowania z dużą częstotliwością.
+ 
+Podczas tworzenia oprogramowania kierowano się spełnieniem założenia zapewnienia akwizycji danych z zachowaniem jak najpełniejszej (w granicach możliwości technicznych) informacji o czasie pomiaru. Podjęto szereg działań, które pomogły w spełnieniu powyższego założenia, co przetestowano i zapr
+
+ Zrealizowano funkcjonalność sterowania pomiarem przez użytkownika z poziomu aplikacji webowej oraz wysyłanie danych za pomocą protokołu MQTT. Obsłużono czujniki wilgotności i ciśnienia przy użyciu steronika \ang{i2cdev} oraz przetwornika analogowo-cyfrowego za pomocą sterownika \ang{spidev}. Przetwornik przetestowano również za pomocą własnego sterownika i aplikacji testowej. Pomyślnie przetestowano działanie układów i akwizycję danych. 
 
 Użytkownik komunikuje się z systemem dzięki interfejsowi graficznemu aplikacji w przeglądarce internetowej. Zaletą systemu jest jego łatwa rozszerzalność. Dokonanie niewielkich zmian w oprogramowaniu i możliwość podłączenia urządzeń do magistrali SPI i I$^2$C oraz pozostałych pinów GPIO sprawia, że użytkownik jest w stanie rozszerzać system o nowe funkcjonalności. Ponadto fakt, iż Raspberry Pi jest popularnym minikomputerem w swojej dziedzinie, zapewnia użytkownikowi wsparcie w dokonywaniu ewentualnych zmian w konfiguracji i strukturze systemu akwizycji danych. 
 

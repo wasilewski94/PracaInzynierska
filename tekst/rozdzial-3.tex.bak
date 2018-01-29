@@ -58,7 +58,7 @@ Podłączenie przetwornika analogowo cyfrowego przez interfejs SPI do platformy 
 	\label{fig:maxandrpi}
 \end{figure}
 
-Na Rys. \ref{fig:maxczasowy} przedstawiono przebiegi czasowe napięć na poszczególnych liniach interfejsu w trakcie jednej konwersji napięcia. Jak widać transmisja jednej próbki napięcia odbywa się za pomocą jednego bajtu konfiguracyjnego wysłanego z układu typu Master. Przetwornik dokonuje konwersji napięcia analogowego z wybranego kanału i wysyła dwa bajty zawierające dane. Z wykresu odczytać można parametr \ang{ACQUISITION} wynoszący 1,5 $\mu$s. 
+Na Rys. \ref{fig:maxczasowy} przedstawiono przebiegi czasowe napięć na poszczególnych liniach interfejsu w trakcie jednej konwersji napięcia. Jak widać transmisja jednej próbki napięcia odbywa się po przesłaniu jednego bajtu konfiguracyjnego wysłanego z układu typu Master. Przetwornik dokonuje konwersji napięcia analogowego z wybranego kanału i wysyła dwa bajty zawierające dane. Z wykresu odczytać można parametr \ang{ACQUISITION} wynoszący 1,5 $\mu$s. 
 
 
 \begin{figure}[h]
@@ -123,16 +123,16 @@ Transmisja odbywa się za pomocą czterech linii:
 
 Przetwornik, którego użyto jest w stanie komunikować się przy częstotliwości taktowania zegara do 2MHz. Urządzenie zostało podłączone do Raspberry Pi jako układ typu Slave. Sygnał zegara jest podawany z układu typu Master, więc w celu uniknięcia błędów transmisji należy ustawić parametr maksymalnej częstotliwości zegara w sterowniku. 
 
-\newpage
 
 \section{Interfejs I$^2$C}
 
-Interfejs I$^2$C (również IIC - Inter Integrated Circuit - z ang. pomiędzy układami scalonymi) to synchroniczny interfejs szeregowy zaprojektowany przez firmę Philips. Stosowany jest do komunikacji z urządzeniami nie wymagającymi dużych szybkości transmisji. Interfejs pozwala na podłączenie do magistrali wiele urządzenia typu Master oraz typu Slave. Wszystkie nadajniki posiadają wyjścia typu otwarty kolektor co powoduje, że poziomy logiczne napięć stanu wysokiego układów podłączonych do jednej magistrali mogą się różnić.  Urządzenia komunikujące się za pomocą tego interfejsu mają z góry przypisany adres i są podłączone z resztą urządzeń za pomocą dwóch linii: 
+Interfejs I$^2$C (również IIC - Inter Integrated Circuit - z ang. pomiędzy układami scalonymi) to synchroniczny interfejs szeregowy zaprojektowany przez firmę Philips. Stosowany jest do komunikacji z urządzeniami nie wymagającymi dużych szybkości transmisji. Interfejs pozwala na podłączenie do magistrali wiele urządzeń typu Master oraz typu Slave. Wszystkie nadajniki posiadają wyjścia typu otwarty kolektor co powoduje, że poziomy logiczne napięć stanu wysokiego układów podłączonych do jednej magistrali mogą się różnić. Urządzenia komunikujące się za pomocą tego interfejsu mają z góry przypisany adres i są podłączone z resztą urządzeń za pomocą dwóch linii: 
 \begin{itemize}
 \item SDA (Serial Data Line),
 \item SCL (Serial Clock Line).
 \end{itemize}
 
+Interfejs I$^2$C nie gwarantuje stałego czasu transmisji, więc korzyści wynikające z implementacji obsługi w kodzie sterownika są mniejsze. Biorąc to pod uwagę założono, że przetworniki podłączane do systemu za pomocą magistrali I$^2$C będą służyły do pomiarów z niską częstotliwością próbkowania.
 
 \section{Porównanie dostępnych interfejsów}
 

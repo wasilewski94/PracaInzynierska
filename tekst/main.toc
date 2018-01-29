@@ -1,6 +1,6 @@
 \select@language {polish}
-\contentsline {section}{Streszczenie}{2}{section*.1}
-\contentsline {section}{Abstract}{3}{section*.2}
+\contentsline {section}{Streszczenie}{ii}{section*.1}
+\contentsline {section}{Abstract}{iii}{section*.2}
 \contentsline {chapter}{\numberline {1\relax .\kern .5em }Wst\IeC {\k e}p}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1\relax .\kern .5em }Wprowadzenie}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2\relax .\kern .5em }Cel i zakres pracy}{1}{section.1.2}
@@ -11,46 +11,48 @@
 \contentsline {subsection}{\numberline {2.1.2\relax .\kern .5em }Oscyloskop cyfrowy Digilent Analog Discovery 2}{4}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2\relax .\kern .5em }Cechy systemu}{5}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1\relax .\kern .5em }Informacja o czasie pomiaru}{5}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2\relax .\kern .5em }Zegar czasu rzeczywistego}{5}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3\relax .\kern .5em }Struktura systemu}{6}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1\relax .\kern .5em }Platforma Raspberry Pi}{6}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2\relax .\kern .5em }P\IeC {\l }ytka pomiarowa}{7}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3\relax .\kern .5em }Za\IeC {\l }o\IeC {\.z}enia oprogramowania}{8}{subsection.2.3.3}
-\contentsline {chapter}{\numberline {3\relax .\kern .5em }Projekt}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1\relax .\kern .5em }P\IeC {\l }ytka pomiarowa}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2\relax .\kern .5em }Przetwornik analogowo-cyfrowy}{10}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1\relax .\kern .5em }Analiza dost\IeC {\k e}pnych uk\IeC {\l }ad\IeC {\'o}w}{10}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2\relax .\kern .5em }Przetwornik MAX 1202}{10}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3\relax .\kern .5em }Przetwornik MCP 3424}{11}{subsection.3.2.3}
-\contentsline {section}{\numberline {3.3\relax .\kern .5em }Interfejs SPI}{11}{section.3.3}
+\contentsline {subsection}{\numberline {2.3.4\relax .\kern .5em }Zapewnienie niezawodno\IeC {\'s}ci systemu}{8}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5\relax .\kern .5em }Protok\IeC {\'o}\IeC {\l } sieciowy MQTT}{9}{subsection.2.3.5}
+\contentsline {chapter}{\numberline {3\relax .\kern .5em }Projekt}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1\relax .\kern .5em }P\IeC {\l }ytka pomiarowa}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2\relax .\kern .5em }Przetwornik analogowo-cyfrowy}{11}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1\relax .\kern .5em }Analiza dost\IeC {\k e}pnych uk\IeC {\l }ad\IeC {\'o}w}{11}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2\relax .\kern .5em }Przetwornik MAX 1202}{11}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3\relax .\kern .5em }Przetwornik MCP 3424}{12}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3\relax .\kern .5em }Interfejs SPI}{12}{section.3.3}
 \contentsline {section}{\numberline {3.4\relax .\kern .5em }Interfejs I$^2$C}{13}{section.3.4}
-\contentsline {section}{\numberline {3.5\relax .\kern .5em }Por\IeC {\'o}wnanie dost\IeC {\k e}pnych interfejs\IeC {\'o}w}{13}{section.3.5}
-\contentsline {section}{\numberline {3.6\relax .\kern .5em }Pozosta\IeC {\l }e czujniki pod\IeC {\l }\IeC {\k a}czane do systemu przez magistral\IeC {\k e} I$^2$C}{14}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1\relax .\kern .5em }Modu\IeC {\l } z czujnikiem ci\IeC {\'s}nienia i temperatury LPS25H}{14}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2\relax .\kern .5em }Modu\IeC {\l } z czujnikiem wilgotno\IeC {\'s}ci i temperatury z uk\IeC {\l }adem HTS221}{15}{subsection.3.6.2}
-\contentsline {chapter}{\numberline {4\relax .\kern .5em }Oprogramowanie}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1\relax .\kern .5em }System operacyjny}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2\relax .\kern .5em }\IeC {\'S}rodowisko Buildroot}{17}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1\relax .\kern .5em }Interfejs \IeC {\'s}rodowiska}{18}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2\relax .\kern .5em }Toolchain}{18}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3\relax .\kern .5em }Dodawanie modu\IeC {\l }\IeC {\'o}w j\IeC {\k a}dra}{18}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3\relax .\kern .5em }Komunikacja z Raspberry Pi}{19}{section.4.3}
-\contentsline {section}{\numberline {4.4\relax .\kern .5em }Sterowniki urz\IeC {\k a}dze\IeC {\'n}}{19}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1\relax .\kern .5em }Sterownik przetwornika analogowo-cyfrowego}{19}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2\relax .\kern .5em }Protok\IeC {\'o}\IeC {\l } synchronizacji czasu}{20}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3\relax .\kern .5em }Znacznik czasu}{20}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5\relax .\kern .5em }Drzewo urz\IeC {\k a}dze\IeC {\'n}}{21}{section.4.5}
-\contentsline {section}{\numberline {4.6\relax .\kern .5em }Aplikacje w przestrzeni u\IeC {\.z}ytkownika}{21}{section.4.6}
-\contentsline {subsection}{\numberline {4.6.1\relax .\kern .5em }Aplikacja wykorzystuj\IeC {\k a}ca modu\IeC {\l } \textit {spidev}}{21}{subsection.4.6.1}
-\contentsline {subsection}{\numberline {4.6.2\relax .\kern .5em }Aplikacje wykorzystuj\IeC {\k a}ca modu\IeC {\l } \textit {i2cdev}}{22}{subsection.4.6.2}
-\contentsline {subsection}{\numberline {4.6.3\relax .\kern .5em }Programy publikuj\IeC {\k a}ce i subskrybuj\IeC {\k a}ce dane przy pomocy protoko\IeC {\l }u MQTT}{22}{subsection.4.6.3}
-\contentsline {subsection}{\numberline {4.6.4\relax .\kern .5em }Aplikacja internetowa}{23}{subsection.4.6.4}
-\contentsline {chapter}{\numberline {5\relax .\kern .5em }Testy}{24}{chapter.5}
-\contentsline {section}{\numberline {5.1\relax .\kern .5em }Przebieg test\IeC {\'o}w}{24}{section.5.1}
-\contentsline {section}{\numberline {5.2\relax .\kern .5em }U\IeC {\.z}yte narz\IeC {\k e}dzia}{24}{section.5.2}
-\contentsline {section}{\numberline {5.3\relax .\kern .5em }Testy funkcjonalne}{24}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1\relax .\kern .5em }Test interfejsu sieciowego}{24}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2\relax .\kern .5em }Testy niezawodno\IeC {\'s}ci systemu}{25}{subsection.5.3.2}
+\contentsline {section}{\numberline {3.5\relax .\kern .5em }Por\IeC {\'o}wnanie dost\IeC {\k e}pnych interfejs\IeC {\'o}w}{14}{section.3.5}
+\contentsline {section}{\numberline {3.6\relax .\kern .5em }Pozosta\IeC {\l }e czujniki pod\IeC {\l }\IeC {\k a}czane do systemu przez magistral\IeC {\k e} I$^2$C}{15}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1\relax .\kern .5em }Modu\IeC {\l } z czujnikiem ci\IeC {\'s}nienia i temperatury LPS25H}{15}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2\relax .\kern .5em }Modu\IeC {\l } z czujnikiem wilgotno\IeC {\'s}ci i temperatury z uk\IeC {\l }adem HTS221}{16}{subsection.3.6.2}
+\contentsline {chapter}{\numberline {4\relax .\kern .5em }Oprogramowanie}{18}{chapter.4}
+\contentsline {section}{\numberline {4.1\relax .\kern .5em }System operacyjny}{18}{section.4.1}
+\contentsline {section}{\numberline {4.2\relax .\kern .5em }\IeC {\'S}rodowisko Buildroot}{18}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1\relax .\kern .5em }Interfejs \IeC {\'s}rodowiska}{19}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2\relax .\kern .5em }Toolchain}{19}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3\relax .\kern .5em }Dodawanie modu\IeC {\l }\IeC {\'o}w j\IeC {\k a}dra}{19}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3\relax .\kern .5em }Komunikacja z Raspberry Pi}{20}{section.4.3}
+\contentsline {section}{\numberline {4.4\relax .\kern .5em }Sterowniki urz\IeC {\k a}dze\IeC {\'n}}{20}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1\relax .\kern .5em }Sterownik przetwornika analogowo-cyfrowego}{20}{subsection.4.4.1}
+\contentsline {section}{\numberline {4.5\relax .\kern .5em }Protok\IeC {\'o}\IeC {\l } synchronizacji czasu}{21}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1\relax .\kern .5em }Znacznik czasu}{21}{subsection.4.5.1}
+\contentsline {section}{\numberline {4.6\relax .\kern .5em }Drzewo urz\IeC {\k a}dze\IeC {\'n}}{22}{section.4.6}
+\contentsline {section}{\numberline {4.7\relax .\kern .5em }Konfiguracja modu\IeC {\l }u watchdog}{22}{section.4.7}
+\contentsline {section}{\numberline {4.8\relax .\kern .5em }Aplikacje w przestrzeni u\IeC {\.z}ytkownika}{23}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1\relax .\kern .5em }Aplikacja wykorzystuj\IeC {\k a}ca modu\IeC {\l } \textit {spidev}}{23}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2\relax .\kern .5em }Aplikacje wykorzystuj\IeC {\k a}ca modu\IeC {\l } \textit {i2cdev}}{23}{subsection.4.8.2}
+\contentsline {subsection}{\numberline {4.8.3\relax .\kern .5em }Programy publikuj\IeC {\k a}ce i subskrybuj\IeC {\k a}ce dane przy pomocy protoko\IeC {\l }u MQTT}{23}{subsection.4.8.3}
+\contentsline {subsection}{\numberline {4.8.4\relax .\kern .5em }Aplikacja webowa}{24}{subsection.4.8.4}
+\contentsline {chapter}{\numberline {5\relax .\kern .5em }Testy}{25}{chapter.5}
+\contentsline {section}{\numberline {5.1\relax .\kern .5em }Przebieg test\IeC {\'o}w}{25}{section.5.1}
+\contentsline {section}{\numberline {5.2\relax .\kern .5em }U\IeC {\.z}yte narz\IeC {\k e}dzia}{25}{section.5.2}
+\contentsline {section}{\numberline {5.3\relax .\kern .5em }Testy funkcjonalne}{25}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1\relax .\kern .5em }Test interfejsu sieciowego}{25}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2\relax .\kern .5em }Testy niezawodno\IeC {\'s}ci systemu}{26}{subsection.5.3.2}
 \contentsline {section}{\numberline {5.4\relax .\kern .5em }Wyniki pomiar\IeC {\'o}w}{26}{section.5.4}
 \contentsline {subsection}{\numberline {5.4.1\relax .\kern .5em }Charakterystyki napi\IeC {\k e}cia spr\IeC {\'o}bkowanego przetwornikiem ADC MAX1202}{26}{subsection.5.4.1}
 \contentsline {subsection}{\numberline {5.4.2\relax .\kern .5em }Analiza FFT sygna\IeC {\l }u sinusoidalnego}{28}{subsection.5.4.2}
@@ -58,4 +60,4 @@
 \contentsline {section}{\numberline {5.5\relax .\kern .5em }Analiza wynik\IeC {\'o}w}{31}{section.5.5}
 \contentsline {subsection}{\numberline {5.5.1\relax .\kern .5em }Prezentacja i wizualizacja danych pomiarowych}{31}{subsection.5.5.1}
 \contentsline {chapter}{\numberline {6\relax .\kern .5em }Podsumowanie}{32}{chapter.6}
-\contentsline {chapter}{Bibliografia}{33}{chapter*.6}
+\contentsline {chapter}{Bibliografia}{34}{chapter*.6}

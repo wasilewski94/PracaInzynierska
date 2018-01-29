@@ -68,10 +68,11 @@ użyto struktury hr\_timer. Po skończeniu odliczania przez licznik uruchamiana 
 Istotnym podczas pisania sterownika był fakt, że dane są odbierane w funkcji obsługi przerwania. Determinowało to użycie funkcji asynchronicznej, bo funkcja spi\_sync\_transfer może być usypiana, więc nie możemy użyć jej w kontekście obsługi przerwania.
 Dokonując niewielkich zmian w konfiguracji zawartej w kodzie sterownika możliwe jest obsłużenie innych układów posiadających interfejs SPI. Zweryfikowaniu i ewentualnej zmianie powinny być poddane pola struktury \ang{spi\_transfer} opisującej parametry transferu spi, które są opisane w dokumentacji jądra systemu operacyjnego Linux.\cite{spiKernel}.
 
-\subsection{Protokół synchronizacji czasu}
+\section{Protokół synchronizacji czasu}
 
-Aby otrzymać dokładną informację o czasie pobrania próbki z przetwornika lub czujnika potrzebna jest synchronizacja czasu pomiędzy urządzeniami, którą można zapewnić dzięki protokołowi synchronizacji czasu takim jak na przykład NTP (z ang. Network Time Protocol).
+Aby otrzymać dokładną informację o czasie pobrania próbki z przetwornika lub czujnika potrzebna jest synchronizacja czasu pomiędzy urządzeniami, którą można zapewnić dzięki protokołowi synchronizacji czasu NTP (z ang. Network Time Protocol).
 Domyślnie w systemie Raspbian Jessie działa usługa \ang{systemd-timesyncd}, która działa na podstawie protokołu SNTP (z ang. Simple NTP) i jest dużo mniej rozbudowana. W przeciwieństwie do NTP to tylko klient, który pobiera i aktualizuje czas w systemie. W przypadku gdy chcemy skorzystać z serwera NTP, najlepiej jest tę usługę wyłączyć\cite{ntp}.
+Jak wspomniano w podrozdziale \ref{ntpSubsection}, dokładność synchronizacji protokołu   utrzymuje się na poziomie kilkudziesięciu mikrosekund w zależności od wybranego serwera czasu.
 
 \subsection{Znacznik czasu}
 
@@ -88,6 +89,12 @@ Tak zebrane dane mogą być wykorzystane w aplikacji z przestrzeni użytkownika 
 
 \section{Drzewo urządzeń}
 W celu uruchomienia swojego modułu do jądra napisano nakładkę na drzewo urządzeń i skompilowaną dodano do odpowiedniego katalogu /boot/overlays, a następnie dopisano w pliku /boot/config.txt nazwę nakładki. Podane w nakładce parametry transmisji danych między urządzeniem podłączonym do magistrali, a płytką Raspberry Pi są ustalane przy załadowaniu modułu. 
+
+
+\section{Konfiguracja modułu watchdog}
+
+Raspbian zawiera moduł do jądra obsługujący licznik układu \ang{watchdog}. 
+Aby uaktywnić układ należy dodać parametr do drzewa urządzeń za pomocą wpisania \ang{dtparam=watchdog=on} w pliku zawierającym konfigurację ładowania systemu \cite{watchdog}. Dodatkowo w pliku /etc/modprobe.d/bcm2835-wdt.conf można zdefiniować czas braku aktywności systemu po jakim układ \ang{watchdog} wywoła ponowne uruchomienie systemu, wpisując \ang{options bcm2835\_wdt heartbeat=14 nowayout=0}. Należy stworzyć jeszcze plik /etc/modprobe.d/bcm2835-wdt.conf zawierający konfigurację modułu obsługującego układ \ang{watchdog}: \ang{options bcm2835\_wdt heartbeat=14 nowayout=0}.
 
 
 \section{Aplikacje w przestrzeni użytkownika}
@@ -122,7 +129,7 @@ client.subscribe("test\_mqtt")
 
 Program odpowiadający za odebranie danych zawiera informację na temat połączenia sieciowego: adres IP oraz numer portu.
 
-\subsection{Aplikacja internetowa}
+\subsection{Aplikacja webowa}
 
-Aplikacja została napisana w języku php i html. Użytkownik jest w stanie uruchomić proces oraz go wyłączyć, korzystając z identyfikatora procesu zwracanego przez funkcję  \ang{shell\_exec}. Identyfikator uruchomionego procesu zapisywany jest w pliku pid.txt. Dane zebrane przez czujniki zapisywane są w pliku tekstowym w katalogu, z którego była wywołana aplikacja. W przypadku wywołania z aplikacji internetowej jest to katalog \ang{/var/www/html}. Parametry akwizycji danych mogę być ustawiane z poziomu aplikacji internetowej i zapisane do pliku konfiguracyjnego. Informacja o parametrach pomiarów jest wczytywana z pliku konfiguracyjnego przez program obsługujący dany czujnik. Po odebraniu próbki użytkownik jest w stanie podejrzeć aktualną wartość odczytaną z sensora uruchamiając aplikacją obsługującą protokół MQTT. 
+Aplikacja webowa została napisana w języku php i html i jest programem uruchamianym na serwerze i zapewnia graficzny interfejs. Użytkownik jest w stanie uruchomić proces oraz go wyłączyć, korzystając z identyfikatora procesu zwracanego przez funkcję  \ang{shell\_exec}. Identyfikator uruchomionego procesu zapisywany jest w pliku pid.txt. Dane zebrane przez czujniki zapisywane są w pliku tekstowym w katalogu, z którego była wywołana aplikacja. W przypadku wywołania z aplikacji internetowej jest to katalog \ang{/var/www/html}. Parametry akwizycji danych mogę być ustawiane z poziomu aplikacji internetowej i zapisane do pliku konfiguracyjnego. Informacja o parametrach pomiarów jest wczytywana z pliku konfiguracyjnego przez program obsługujący dany czujnik. Po odebraniu próbki użytkownik jest w stanie podejrzeć aktualną wartość odczytaną z sensora uruchamiając aplikacją obsługującą protokół MQTT. 
 

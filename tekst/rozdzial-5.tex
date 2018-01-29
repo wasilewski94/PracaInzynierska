@@ -35,14 +35,7 @@ Sprawdzenie parametrów pomiaru napięcia przetwornika analogowo-cyfrowego przep
 Wykonano test działania interfejsów sieciowych systemu użytkownika pod kątem spójności danych wysyłanych z systemu do użytkownika podłączonego przez sieć TCP/IP. Połączenie użytkownika korzystającego z przeglądarki w komputerze osobistym z systemem akwizycji danych było zestawione przy wykorzystaniu routera Wi-Fi.
  
 
-
 \subsection{Testy niezawodności systemu}
-
-Niezawodność działania systemu jest bardzo istotna w przypadku sieciowego systemu akwizycji danych. Urządzenie jest przystosowane do pracy autonomicznej, więc aby zdalny dostęp mógł być zapewniony, Raspberry Pi musi być w stanie wykrywać stan zawieszenia systemu, gdyż wpływa to bezpośrednio na niezawodność i ciągłość działania. 
-
-W komputerze Raspberry Pi istnieje możliwość uaktywnienia układu \ang{watchdog}, zapewniającego automatyczny restart systemu w przypadku jego zawieszenia. 
-Raspbian zawiera moduł do jądra obsługujący licznik układu \ang{watchdog}. 
-Aby uaktywnić układ należy dodać parametr do drzewa urządzeń za pomocą wpisania \ang{dtparam=watchdog=on} w pliku zawierającym konfigurację ładowania systemu \cite{watchdog}. Dodatkowo w pliku /etc/modprobe.d/bcm2835-wdt.conf można zdefiniować czas braku aktywności systemu po jakim układ \ang{watchdog} wywoła ponowne uruchomienie systemu, wpisując \ang{options bcm2835\_wdt heartbeat=14 nowayout=0}. Należy stworzyć jeszcze plik /etc/modprobe.d/bcm2835-wdt.conf zawierający konfigurację modułu obsługującego układ \ang{watchdog}: \ang{options bcm2835\_wdt heartbeat=14 nowayout=0}.
 
 Po ustawieniu odpowiedniej konfiguracji przeprowadzono testy niezawodności działania układu \ang{watchdog}, wywołując aplikacje powodujące zawieszenie systemu z załadowanym modułem. Oprócz konsoli \ang{ssh} podłączono komputer przez konwerter USB-UART w celu upewnienia się, że system jest uruchamiany ponownie.
 Testy zakończono sukcesem, moduł sterujący układem \ang{watchdog} działał poprawnie i wywoływał ponowne uruchomienie systemu przy każdym zawieszeniu. 
