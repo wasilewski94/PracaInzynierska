@@ -56,7 +56,7 @@ I2C driver - i2c-dev documantation
 
 https://www.kernel.org/doc/Documentation/i2c/dev-interface
 
-\bibitem{rpi.gpio}
+\bibitem{rpigpio}
 RPi.GPIO 0.6.3 : Python Package Index
 
 https://pypi.python.org/pypi/RPi.GPIO

@@ -103,7 +103,7 @@
 
 \opinie{%
   \input{opiniaopiekuna.tex}
-  \newpage
+  %\newpage
   \input{recenzja.tex}
 }
 \streszczenia{
@@ -113,7 +113,9 @@
 }
 
 \begin{document}
-\pagenumbering{roman}
+
+
+\pagenumbering{arabic}
 \maketitle
 
 \input{rozdzial-1.tex}
